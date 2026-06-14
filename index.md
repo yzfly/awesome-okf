@@ -28,6 +28,17 @@ okf_version: "0.1"
 * [html-to-okf](plugins/html-to-okf/) - HTML → OKF(双表示)
 * [github-to-okf](plugins/github-to-okf/) - GitHub 仓库 → OKF
 
+# 外部与官方资源(references/)
+
+* [官方规范 SPEC.md](references/okf-spec.md) - OKF v0.1 规范正文
+* [knowledge-catalog 仓库](references/knowledge-catalog-repo.md) - 官方总入口
+* [发布博客](references/launch-blog.md) - OKF 官方发布文
+* [官方参考实现](references/reference-implementations.md) - 富化 agent 与可视化器
+* [官方示例 bundle](references/sample-bundles.md) - GA4 / SO / Bitcoin
+* [Metadata as Code](references/metadata-as-code.md) - kcmd / mdcode
+* [Karpathy 的 LLM Wiki](references/karpathy-llm-wiki.md) - OKF 思想源头
+* [qmd](references/qmd.md) - Markdown 本地搜索,可作 consumer 后端
+
 # Skills(skills/)
 
 * [okf-creator](skills/okf-creator/) - 从任意输入创建高质量 OKF
