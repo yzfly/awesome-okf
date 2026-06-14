@@ -1,0 +1,23 @@
+[project]
+name = "obsidian-to-okf"
+version = "0.1.0"
+description = "把 Obsidian vault 转换为符合 OKF v0.1 的知识包(bundle)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "云中江树" }]
+keywords = ["okf", "obsidian", "knowledge", "producer", "markdown"]
+dependencies = []
+
+[project.scripts]
+obsidian-to-okf = "obsidian_to_okf.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yzfly/awesome-okf"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/obsidian_to_okf"]

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+
+# uv
+uv.lock
+
+# 环境与密钥
+.env
+*.local
+config.local.*
+feishu_okf.toml
+
+# 导出产物(默认忽略,避免误传他人知识库)
+out/
+bundles/
+*.okf/
+
+# 系统
+.DS_Store
+.idea/
+.vscode/

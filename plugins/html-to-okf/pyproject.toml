@@ -1,0 +1,23 @@
+[project]
+name = "html-to-okf"
+version = "0.1.0"
+description = "把 HTML 文件转换为 OKF 概念(机读 .md + 人友好 .html 双表示)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "云中江树" }]
+keywords = ["okf", "html", "knowledge", "producer"]
+dependencies = []
+
+[project.scripts]
+html-to-okf = "html_to_okf.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yzfly/awesome-okf"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/html_to_okf"]
