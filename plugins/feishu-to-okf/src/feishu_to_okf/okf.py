@@ -65,6 +65,6 @@ def write_root(out_dir: Path, title: str, entries: list[tuple[str, str, str]],
     (out_dir / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     (out_dir / "log.md").write_text(
         f"# Directory Update Log\n\n## {date}\n"
-        f"* **Initialization**: 由 feishu-okf 从飞书知识空间「{source}」导出。\n",
+        f"* **Initialization**: 由 feishu-to-okf 从飞书知识空间「{source}」导出。\n",
         encoding="utf-8",
     )

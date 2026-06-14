@@ -49,4 +49,4 @@ license: MIT
 ## 反向关系
 
 - 与 [`book-to-okf`](../book-to-okf/) 互为逆操作:book → OKF → book。
-- 任何 producer([`feishu-okf`](../../plugins/feishu-okf/)、[`awesome-importer`](../../plugins/awesome-importer/)、[`obsidian-to-okf`](../../plugins/obsidian-to-okf/)、[`notion-to-okf`](../../plugins/notion-to-okf/)、[`html-to-okf`](../../plugins/html-to-okf/))的产物,都能直接喂给本 Skill 发布。
+- 任何 producer([`feishu-to-okf`](../../plugins/feishu-to-okf/)、[`awesome-to-okf`](../../plugins/awesome-to-okf/)、[`obsidian-to-okf`](../../plugins/obsidian-to-okf/)、[`notion-to-okf`](../../plugins/notion-to-okf/)、[`html-to-okf`](../../plugins/html-to-okf/))的产物,都能直接喂给本 Skill 发布。

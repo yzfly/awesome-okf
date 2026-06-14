@@ -1,6 +1,6 @@
 ---
 type: Producer
-title: feishu-okf
+title: feishu-to-okf
 description: 把飞书(Feishu/Lark)知识空间与文档导出为符合 OKF v0.1 的知识包,让团队飞书知识被 AI 智能体直接消费。
 tags: [okf, feishu, lark, producer, cli, wiki]
 lang: zh
@@ -8,7 +8,7 @@ timestamp: 2026-06-14T00:00:00Z
 license: MIT
 ---
 
-# feishu-okf
+# feishu-to-okf
 
 把飞书(Feishu / Lark)的**知识空间(Wiki)与文档**,一键导出为符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包(bundle)。团队沉淀在飞书里的知识,从此可以被 AI 智能体直接检索,也能用 [`okf-to-book`](../../skills/okf-to-book/) 发布成文档站。
 
@@ -23,7 +23,7 @@ license: MIT
 ## 安装与配置
 
 ```bash
-cd plugins/feishu-okf
+cd plugins/feishu-to-okf
 uv pip install -e .        # 或 pip install -e .
 
 export FEISHU_APP_ID=cli_xxxxxxxx
@@ -34,10 +34,10 @@ export FEISHU_APP_SECRET=xxxxxxxxxxxxxxxx
 
 ```bash
 # 1. 列出应用可访问的知识空间,拿到 space_id
-feishu-okf spaces
+feishu-to-okf spaces
 
 # 2. 导出整个空间为 OKF bundle
-feishu-okf export 7012345678901234567 -o ./out --lang zh --date 2026-06-14
+feishu-to-okf export 7012345678901234567 -o ./out --lang zh --date 2026-06-14
 ```
 
 ## 它做了什么

@@ -23,13 +23,13 @@ timestamp: 2026-06-14T00:00:00Z
 为了让"各种 xx-to-okf 插件"彼此一致、产物可互换,所有 producer 遵循:
 
 1. **契约**:输入(某来源)→ 输出一个**能通过 `skills/okf-creator/scripts/validate_okf.py` 的 bundle**。这是唯一硬性要求。
-2. **命名**:`<来源>-to-okf` 或 `<来源>-importer`,CLI 同名。
+2. **命名**:接入(源 → OKF)统一 `<来源>-to-okf`,输出(OKF → 目标)统一 `okf-to-<目标>`,CLI 与目录同名。
 3. **必产出**:根 `index.md`(带 `okf_version: "0.1"`)、`log.md`(`## YYYY-MM-DD` 前缀),每个概念有非空 `type`。
 4. **建议**:尽量零第三方依赖(纯标准库),`--lang` 默认 `zh`,`resource` 指回原始来源,中文标题生成 CJK slug。
 5. **自带 README**:本身也是一个 OKF 概念(`type: Producer`,带 frontmatter),说明安装、用法、限制。
 6. **可测**:能离线跑一个最小样例并通过校验(参考现有插件的测试方式)。
 
-> 现有参考实现:[`feishu-okf`](./plugins/feishu-okf/)、[`awesome-importer`](./plugins/awesome-importer/)、[`obsidian-to-okf`](./plugins/obsidian-to-okf/)、[`notion-to-okf`](./plugins/notion-to-okf/)、[`html-to-okf`](./plugins/html-to-okf/)。照着抄即可。
+> 现有参考实现:[`feishu-to-okf`](./plugins/feishu-to-okf/)、[`awesome-to-okf`](./plugins/awesome-to-okf/)、[`obsidian-to-okf`](./plugins/obsidian-to-okf/)、[`notion-to-okf`](./plugins/notion-to-okf/)、[`html-to-okf`](./plugins/html-to-okf/)。照着抄即可。
 
 ## 本仓库自身是 OKF bundle
 

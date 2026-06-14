@@ -31,8 +31,8 @@ ROOT = Path(__file__).resolve().parents[4]
 
 # command -> ("module", 相对 src 路径, 模块名) 或 ("script", 相对脚本路径)
 MODULES = {
-    "from-awesome": ("module", "plugins/awesome-importer/src", "awesome_importer.cli"),
-    "from-feishu": ("module", "plugins/feishu-okf/src", "feishu_okf.cli"),
+    "from-awesome": ("module", "plugins/awesome-to-okf/src", "awesome_to_okf.cli"),
+    "from-feishu": ("module", "plugins/feishu-to-okf/src", "feishu_to_okf.cli"),
     "from-obsidian": ("module", "plugins/obsidian-to-okf/src", "obsidian_to_okf.cli"),
     "from-notion": ("module", "plugins/notion-to-okf/src", "notion_to_okf.cli"),
     "from-html": ("module", "plugins/html-to-okf/src", "html_to_okf.cli"),

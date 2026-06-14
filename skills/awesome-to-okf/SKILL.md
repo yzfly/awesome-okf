@@ -19,9 +19,9 @@ license: MIT
 
 ## 工作流
 
-1. **导入(机械)**:用 [`awesome-importer`](../../plugins/awesome-importer/) 把列表转成基础 bundle。
+1. **导入(机械)**:用 [`awesome-to-okf`](../../plugins/awesome-to-okf/) 把列表转成基础 bundle。
    ```bash
-   python -m awesome_importer.cli <owner/repo 或 URL 或本地文件> -o ./out --lang zh
+   python -m awesome_to_okf.cli <owner/repo 或 URL 或本地文件> -o ./out --lang zh
    ```
    每个链接 → 一个 `type: Resource` 概念;每个分节 → 一个目录 + `index.md`。
 

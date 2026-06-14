@@ -1,12 +1,12 @@
-"""awesome-importer 命令行入口。
+"""awesome-to-okf 命令行入口。
 
 用法:
     # 从 GitHub 仓库导入(自动找 README)
-    awesome-importer owner/repo -o ./out
+    awesome-to-okf owner/repo -o ./out
 
     # 从 raw URL 或本地文件导入
-    awesome-importer https://raw.githubusercontent.com/x/y/main/README.md -o ./out
-    awesome-importer ./README.md -o ./out
+    awesome-to-okf https://raw.githubusercontent.com/x/y/main/README.md -o ./out
+    awesome-to-okf ./README.md -o ./out
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ README_NAMES = ("README.md", "readme.md", "Readme.md")
 
 
 def _fetch(url: str) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "awesome-importer"})
+    req = urllib.request.Request(url, headers={"User-Agent": "awesome-to-okf"})
     with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310
         return resp.read().decode("utf-8")
 

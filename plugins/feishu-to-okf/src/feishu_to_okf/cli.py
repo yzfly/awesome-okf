@@ -1,12 +1,12 @@
-"""feishu-okf 命令行入口。
+"""feishu-to-okf 命令行入口。
 
 凭据通过环境变量提供:
     export FEISHU_APP_ID=cli_xxx
     export FEISHU_APP_SECRET=xxx
 
 用法:
-    feishu-okf spaces                         # 列出可访问的知识空间
-    feishu-okf export <space_id> -o ./out     # 导出整个空间为 OKF bundle
+    feishu-to-okf spaces                         # 列出可访问的知识空间
+    feishu-to-okf export <space_id> -o ./out     # 导出整个空间为 OKF bundle
 """
 from __future__ import annotations
 

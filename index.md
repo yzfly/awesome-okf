@@ -21,8 +21,8 @@ okf_version: "0.1"
 # Producer 插件(plugins/)
 
 * [myokf-cli](plugins/myokf-cli/) - 统一命令行入口(myokf)
-* [feishu-okf](plugins/feishu-okf/) - 飞书知识库 → OKF
-* [awesome-importer](plugins/awesome-importer/) - GitHub awesome 列表 → OKF
+* [feishu-to-okf](plugins/feishu-to-okf/) - 飞书知识库 → OKF
+* [awesome-to-okf](plugins/awesome-to-okf/) - GitHub awesome 列表 → OKF
 * [obsidian-to-okf](plugins/obsidian-to-okf/) - Obsidian vault → OKF
 * [notion-to-okf](plugins/notion-to-okf/) - Notion 导出 → OKF
 * [html-to-okf](plugins/html-to-okf/) - HTML → OKF(双表示)

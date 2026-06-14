@@ -1,16 +1,16 @@
 [project]
-name = "awesome-importer"
+name = "feishu-to-okf"
 version = "0.1.0"
-description = "把 GitHub awesome-xx 列表转换为符合 OKF v0.1 的知识包(bundle)"
+description = "把飞书(Feishu/Lark)知识库与文档导出为符合 OKF v0.1 的知识包(bundle)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "云中江树" }]
-keywords = ["okf", "awesome", "github", "knowledge", "producer"]
-dependencies = []  # 仅用标准库,开箱即跑
+keywords = ["okf", "feishu", "lark", "knowledge", "producer", "wiki"]
+dependencies = []  # 仅用标准库
 
 [project.scripts]
-awesome-importer = "awesome_importer.cli:main"
+feishu-to-okf = "feishu_to_okf.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/yzfly/awesome-okf"
@@ -20,4 +20,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/awesome_importer"]
+packages = ["src/feishu_to_okf"]

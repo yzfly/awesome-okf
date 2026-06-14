@@ -118,7 +118,7 @@ def parse_frontmatter(text: str) -> tuple[dict, str]: ...
 
 ## 四、这对我们意味着什么
 
-1. **代码库 → OKF 是真空地带**,GitHub 海量 README/教程/awesome 列表想进 OKF,需要专门 producer。本仓库的 [`awesome-importer`](../plugins/awesome-importer/) 与 [`feishu-okf`](../plugins/feishu-okf/) 先各占一格;代码库 producer 是下一个高价值目标。
+1. **代码库 → OKF 是真空地带**,GitHub 海量 README/教程/awesome 列表想进 OKF,需要专门 producer。本仓库的 [`awesome-to-okf`](../plugins/awesome-to-okf/) 与 [`feishu-to-okf`](../plugins/feishu-to-okf/) 先各占一格;代码库 producer 是下一个高价值目标。
 2. **3.1–3.4 的代码约定**值得连同 [i18n 提案](./okf-spec-zh.md#中文生态议题i18n-扩展提案草案)一起,作为"提案 + 参考实现"向官方提。
 3. okf-creator Skill 已内置这套代码约定,产出代码类 bundle 时直接采用。
 

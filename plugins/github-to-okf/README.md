@@ -10,7 +10,7 @@ license: MIT
 
 # github-to-okf
 
-把一个 GitHub 仓库转换为 OKF 知识包——README/文档 → `Document` 概念,代码文件 → `Module` 概念(带 `language`、提取出的符号、指向源码的 `resource`)。它是 [code-to-okf 约定](../../skills/code-to-okf/references/code-okf-conventions.md) 的落地 producer,与转 awesome **列表**的 [`awesome-importer`](../awesome-importer/) 区分开:本工具转**仓库本身**。
+把一个 GitHub 仓库转换为 OKF 知识包——README/文档 → `Document` 概念,代码文件 → `Module` 概念(带 `language`、提取出的符号、指向源码的 `resource`)。它是 [code-to-okf 约定](../../skills/code-to-okf/references/code-okf-conventions.md) 的落地 producer,与转 awesome **列表**的 [`awesome-to-okf`](../awesome-to-okf/) 区分开:本工具转**仓库本身**。
 
 零第三方依赖。
 

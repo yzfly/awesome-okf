@@ -1,6 +1,6 @@
 ---
 type: Producer
-title: awesome-importer
+title: awesome-to-okf
 description: 把 GitHub awesome-xx 列表转换为符合 OKF v0.1 的知识包,让社区海量精选列表成为 agent 可读的知识。
 tags: [okf, awesome, github, producer, cli]
 lang: zh
@@ -8,7 +8,7 @@ timestamp: 2026-06-14T00:00:00Z
 license: MIT
 ---
 
-# awesome-importer
+# awesome-to-okf
 
 把 GitHub 上海量的 **awesome-xx** 精选列表,一键转换成符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包(bundle)。这样社区里成千上万份"教程/工具/资源"列表,就能被 AI 智能体直接当知识检索,而不只是给人看的链接墙。
 
@@ -17,23 +17,23 @@ license: MIT
 ## 安装
 
 ```bash
-cd plugins/awesome-importer
+cd plugins/awesome-to-okf
 uv pip install -e .        # 或:pip install -e .
 ```
 
-也可不安装直接跑:`PYTHONPATH=src python -m awesome_importer.cli ...`
+也可不安装直接跑:`PYTHONPATH=src python -m awesome_to_okf.cli ...`
 
 ## 用法
 
 ```bash
 # 从 GitHub 仓库导入(自动找 README 与默认分支)
-awesome-importer sindresorhus/awesome -o ./out
+awesome-to-okf sindresorhus/awesome -o ./out
 
 # 从 raw URL 导入
-awesome-importer https://raw.githubusercontent.com/x/y/main/README.md -o ./out
+awesome-to-okf https://raw.githubusercontent.com/x/y/main/README.md -o ./out
 
 # 从本地文件导入
-awesome-importer ./README.md -o ./out --lang zh --date 2026-06-14
+awesome-to-okf ./README.md -o ./out --lang zh --date 2026-06-14
 ```
 
 ## 它做了什么

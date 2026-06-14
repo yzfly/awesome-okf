@@ -31,7 +31,7 @@ myokf validate ./kb
 myokf to-web ./kb -o kb.html
 ```
 
-**Converters into OKF (plugins/):** feishu-okf, awesome-importer, obsidian-to-okf, notion-to-okf, html-to-okf, github-to-okf, and the unified myokf-cli.
+**Converters into OKF (plugins/):** feishu-to-okf, awesome-to-okf, obsidian-to-okf, notion-to-okf, html-to-okf, github-to-okf, and the unified myokf-cli.
 
 **Skills (skills/):** okf-creator, awesome-to-okf, book-to-okf, code-to-okf, github-to-okf, okf-to-book, okf-to-web.
 

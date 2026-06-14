@@ -121,7 +121,7 @@ def write_bundle(
     src = f"（来源:{source_url}）" if source_url else ""
     (out_dir / "log.md").write_text(
         f"# Directory Update Log\n\n## {date}\n"
-        f"* **Initialization**: 由 awesome-importer 从 awesome 列表导入{src}。\n",
+        f"* **Initialization**: 由 awesome-to-okf 从 awesome 列表导入{src}。\n",
         encoding="utf-8",
     )
     return stats

@@ -421,4 +421,4 @@ canonical: /tables/orders.md    # 指向同一概念的"主语言"版本(概念 
 
 **为什么这个口子是干净的:** 它只新增可选字段,不动任何 MUST,不改保留文件名——正好落在规范 §11 定义的"次版本可做向后兼容新增"里,也正好落在官方"明确欢迎扩展提案"的邀请里。
 
-> 配套实现:本仓库的 [`feishu-okf`](../plugins/feishu-okf/) 导出时会写入 `lang: zh`,[`okf-creator`](../skills/okf-creator/) Skill 也内置这套约定。即"提案 + 参考实现"一起出。
+> 配套实现:本仓库的 [`feishu-to-okf`](../plugins/feishu-to-okf/) 导出时会写入 `lang: zh`,[`okf-creator`](../skills/okf-creator/) Skill 也内置这套约定。即"提案 + 参考实现"一起出。
