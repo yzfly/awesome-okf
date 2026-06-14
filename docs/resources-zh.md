@@ -19,6 +19,7 @@ author: 云中江树(整理)
 - [knowledge-catalog 仓库](https://github.com/GoogleCloudPlatform/knowledge-catalog) —— 官方总入口。
 - [okf/ 目录](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) —— 规范、参考实现、示例 bundle。
 - [okf/README.md](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md) —— 参考实现说明(富化 agent + 可视化器)。
+- [okf/src/enrichment_agent](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf/src/enrichment_agent) —— BigQuery 富化 agent 参考实现源码,随规范发布的概念验证。
 - [agents/mdcode(Metadata as Code / kcmd)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/agents/mdcode) —— 元数据即代码工具,含 MCP server。
 
 ## 二、思想源头:LLM Wiki(Karpathy)
