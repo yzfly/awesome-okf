@@ -15,3 +15,4 @@
 
 * [karpathy-llm-wiki.md](karpathy-llm-wiki.md) - Karpathy 的 LLM Wiki(OKF 思想前身)
 * [qmd.md](qmd.md) - 本地 Markdown 搜索,可作 OKF 搜索后端
+* [okf-tools.md](okf-tools.md) - 社区 CLI / Python 库,查询·导航·创作 bundle(早期项目)

@@ -9,3 +9,8 @@
 * **Creation**: 英文 README(README.en.md),中英双语 + i18n 约定(lang/canonical)。
 * **Update**: 把仓库自身做成符合 OKF v0.1 的 bundle 并通过校验(dogfooding)。
 * **Update**: 全量自检——所有脚本编译/加载、producer 产物端到端校验、SKILL frontmatter 合法。
+
+## 2026-06-15
+* **Update**: resources-zh 新增「生态工具与转换器」小节,收录首周社区工具(okf-tools / okf-convert / OKFy / okf-generator / okf-skills / okf-builder / obsidian-okf / okf-roam / okf-dashboard),标注早期项目。
+* **Update**: 新增解读文章(Suganthan / explainx.ai)与媒体报道(The Decoder),并记录 Hugo Issue #15035 这一生态采用信号。
+* **Creation**: references/okf-tools.md——为最完整的社区 CLI/库单列概念条目。
