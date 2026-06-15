@@ -14,3 +14,8 @@
 * **Update**: resources-zh 新增「生态工具与转换器」小节,收录首周社区工具(okf-tools / okf-convert / OKFy / okf-generator / okf-skills / okf-builder / obsidian-okf / okf-roam / okf-dashboard),标注早期项目。
 * **Update**: 新增解读文章(Suganthan / explainx.ai)与媒体报道(The Decoder),并记录 Hugo Issue #15035 这一生态采用信号。
 * **Creation**: references/okf-tools.md——为最完整的社区 CLI/库单列概念条目。
+
+## 2026-06-16
+* **Update**: resources-zh「生态工具与转换器」补 supachai-j/open-knowledge-format-starter(可 fork 的 AI 维护知识库模板,含 skill/校验器/EN-TH 文档)。
+* **Update**: resources-zh「新闻与分析」补两篇解读——Marc Bara《A Standard, or Just a Folder?》(格式互通≠语义互通)与 innFactory《The Open Standard That Frees Your AI Knowledge》。
+* **Note**: 本轮其余候选(OKFy / okf-skills / okf-tools / okf-convert / okf-generator / obsidian-okf / okf-roam / okf-builder / okf-dashboard / explainx / Suganthan / No Hacks / PPC Land)经查重已存在,跳过;纯新闻(TechTimes / Search Engine Journal)按本仓库不扩列单纯报道的口径跳过。

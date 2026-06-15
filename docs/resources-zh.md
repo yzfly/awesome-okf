@@ -10,7 +10,7 @@ author: 云中江树(整理)
 
 # OKF 全网资料汇总
 
-> 截至 2026-06-15 的全网检索结果。OKF 发布于 2026-06-12,生态尚新,本页持续更新,欢迎 PR 补充。
+> 截至 2026-06-16 的全网检索结果。OKF 发布于 2026-06-12,生态尚新,本页持续更新,欢迎 PR 补充。
 
 ## 一、官方一手资料
 
@@ -36,6 +36,8 @@ author: 云中江树(整理)
 - [Google Cloud's Open Knowledge Format turns scattered docs into Markdown files for AI agents(The Decoder)](https://the-decoder.com/google-clouds-open-knowledge-format-turns-scattered-docs-into-markdown-files-for-ai-agents/)
 - [OKF: Google's New Markdown Format for AI Agents(Suganthan)](https://suganthan.com/blog/open-knowledge-format/) —— 面向开发者的格式解读。
 - [OKF: Google AI Agent Standard(explainx.ai)](https://explainx.ai/blog/google-open-knowledge-format-okf-ai-agents-2026) —— OKF 作为 AI agent 知识标准的科普解读。
+- [A Standard, or Just a Folder?(Marc Bara, Medium)](https://medium.com/@marc.bara.iniesta/googles-new-format-for-agent-context-a-standard-or-just-a-folder-82fb21d92041) —— 批判性分析:OKF 统一了"包"的结构,却刻意不统一类型/链接词表,"格式互通 ≠ 语义互通"。
+- [The Open Standard That Frees Your AI Knowledge(innFactory)](https://innfactory.ai/en/blog/open-knowledge-format-okf-standard-for-ai-knowledge/) —— 面向企业:用 OKF 把分散在 Confluence/代码库/wiki 的知识收敛为可版本化、跨厂商互通的 bundle。
 - 采用信号:[Hugo Issue #15035 — Support OKF](https://github.com/gohugoio/hugo/issues/15035) —— 静态站点生成器 Hugo 关于支持 OKF 的兼容讨论,生态采纳的早期迹象。
 
 ## 四、生态工具与转换器(社区,首周项目)
@@ -51,6 +53,7 @@ author: 云中江树(整理)
 - [kennyg/obsidian-okf](https://github.com/kennyg/obsidian-okf) —— 在 Obsidian 校验/创作并导出 OKF bundle 的插件。
 - [zbodtorf/okf-roam](https://github.com/zbodtorf/okf-roam) —— 为 OKF bundle 提供 Roam 式导航(Emacs)。
 - [ametel01/okf-dashboard](https://github.com/ametel01/okf-dashboard) —— OKF 可视化 Dashboard。
+- [supachai-j/open-knowledge-format-starter](https://github.com/supachai-j/open-knowledge-format-starter) —— 可 fork 的 AI 维护知识库 starter 模板,含 Claude Code skill、校验器与 EN/TH 双语文档(MIT)。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
 
