@@ -21,6 +21,7 @@ author: 云中江树(整理)
 - [okf/README.md](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/README.md) —— 参考实现说明(富化 agent + 可视化器)。
 - [okf/src/enrichment_agent](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf/src/enrichment_agent) —— BigQuery 富化 agent 参考实现源码,随规范发布的概念验证。
 - [agents/mdcode(Metadata as Code / kcmd)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/agents/mdcode) —— 元数据即代码工具,含 MCP server。
+- [okf.md/tools —— OKF 生态工具索引](https://okf.md/tools/) —— 社区维护的 OKF 工具索引页,把转换器 / CLI / skill / 查看器等生态项目集中编目,可作发现新工具的入口。
 
 ## 二、思想源头:LLM Wiki(Karpathy)
 
@@ -83,8 +84,14 @@ author: 云中江树(整理)
 - [akdira/okf-toolkit](https://github.com/akdira/okf-toolkit) —— **Python** 全功能 CLI(已上 PyPI):init/new/validate/list/show/index/search/graph/stats,覆盖创建、校验、检索、Mermaid 链接图与统计。
 - [activetwist/OnyxWriter](https://github.com/activetwist/OnyxWriter) —— 本地优先的 OKF bundle 编辑器(Tauri 桌面壳 + Tiptap 可视化 / CodeMirror 原文双模式),带校验面板与交互式 bundle 图(含坏链高亮);现 alpha 阶段。
 - [emanueleielo/deepagents-okf-backend](https://github.com/emanueleielo/deepagents-okf-backend) —— 为 LangChain Deep Agents 提供 OKF 感知的虚拟文件系统后端(已上 PyPI):把 OKF bundle 挂成 agent 的文件系统,按 `type`/`tags`/`title` 语义查询,且每次写入都校验为合法 OKF。
+- [catancs/okf-skill](https://github.com/catancs/okf-skill) —— ⭐ OKF 工具包式 skill:校验 / 查询 / lint / 创建一站式,面向 Claude Code 工作流。本批 skill 类星标较高(~2⭐)。
+- [siculo/okf-skills](https://github.com/siculo/okf-skills) —— 创建并维护 OKF bundle 的 AI agent skills(与已收录的 scaccogatto / xSAVIKx 同名不同源)。
+- [travisjakel/okf-ingest](https://github.com/travisjakel/okf-ingest) —— 摄取工具:校验 OKF bundle 并载入 DuckDB,支持 R / Python 语义搜索,把 OKF 接到分析栈里查询。
+- [chntnm/akasha](https://github.com/chntnm/akasha) —— 3D WebGL 知识图谱浏览器,可加载 OKF bundle 做沉浸式概念关系浏览。
+- [ryansann/okfview](https://github.com/ryansann/okfview) —— 轻量 OKF 查看器,渲染并导航 bundle 内容。
 - [OpenDPP/opendpp-knowledge](https://github.com/OpenDPP/opendpp-knowledge) —— 真实 API 采用案例:把 OpenDPP(欧盟数字产品护照)Integration API 从 live OpenAPI 重新生成为 OKF bundle,每个 endpoint/schema/webhook 一篇交叉链接的 Markdown,随 API 版本刷新不漂移。
-- [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
+- [JayOram/MJML-ai-knowledge](https://github.com/JayOram/MJML-ai-knowledge) —— 知识库样例:把 MJML 邮件框架知识同时以 Claude skill 与 OKF bundle 两种格式发布,示范"一份知识、两种 agent 消费形态"。
+- [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)/ [betmoar/cc-okf-plugin](https://github.com/betmoar/cc-okf-plugin)(读写 / 校验 / 维护 OKF 的 Claude Code 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
 
