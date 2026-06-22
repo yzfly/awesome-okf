@@ -43,6 +43,7 @@ author: 云中江树(整理)
 - [What It Is, the Spec, and How to Use It(StartupHub.ai)](https://www.startuphub.ai/ai-news/insights/2026/google-open-knowledge-format-okf-explained-2026) —— 从"是什么 / 规范字段 / 怎么用"三段式讲清 OKF,适合入门。
 - [The Markdown Standard That Could Replace Your Wiki(Flowtivity)](https://flowtivity.ai/blog/google-open-knowledge-format/) —— 把 OKF 放在"替代传统 wiki"的角度解读。
 - [OKF, explained(WitsCode)](https://witscode.com/open-knowledge-format) —— 开发者向的格式拆解。
+- [What is OKF? Open Knowledge Format(GitBook)](https://www.gitbook.com/blog/what-is-okf-open-knowledge-format) —— 文档平台 GitBook 官方视角:把"写给工程师/用户的同一批 Markdown"同时当作喂 agent 的知识源,解释 OKF 相对 RAG/元数据目录的"结构化遍历"优势。
 - [オープンナレッジフォーマット(OKF)解説(AI-Driven Lab, note.com)](https://note.com/ai_driven/n/n8e2726b98180?hl=en) —— 日文长文,系统讲解 OKF 的设计动机、规范与用法。
 
 ## 四、生态工具与转换器(社区项目)
@@ -59,6 +60,7 @@ author: 云中江树(整理)
 - [zbodtorf/okf-roam](https://github.com/zbodtorf/okf-roam) —— 为 OKF bundle 提供 Roam 式导航(Emacs)。
 - [ametel01/okf-dashboard](https://github.com/ametel01/okf-dashboard) —— OKF 可视化 Dashboard。
 - [supachai-j/open-knowledge-format-starter](https://github.com/supachai-j/open-knowledge-format-starter) —— 可 fork 的 AI 维护知识库 starter 模板,含 Claude Code skill、校验器与 EN/TH 双语文档(MIT)。
+- [Suganthan OKF Bundle Generator](https://suganthan.com/okf-generator/) —— 免费在线生成器,免注册:贴 URL/sitemap 爬取网站(上限 100 页)即得可下载的 OKF `.zip` bundle 加一张内容/内链结构图,可直接托管到 `yoursite.com/okf/`。
 
 ### 多语言实现与更多工具(持续补录)
 
@@ -76,6 +78,12 @@ author: 云中江树(整理)
 - [lars20070/pdf2okf](https://github.com/lars20070/pdf2okf) —— 把 PDF 转换成 OKF 知识库的 producer。
 - [claudiobottari/databricks-okf](https://github.com/claudiobottari/databricks-okf) —— 把 Databricks AWS 官方文档经 llm-wiki 流程编译成 OKF bundle 的真实样例。
 - [dorisgyl/okf-export-pack](https://github.com/dorisgyl/okf-export-pack) —— 把 GBrain 知识导出为 OKF v0.1 bundle 的 producer 样例。
+- [WitsCode OKF Conformance Suite](https://witscode.com/okf-conformance) —— 免费开源(MIT)的 OKF 一致性校验器:Node 本地零依赖、免账号,逐文件按 spec 给 pass/fail(YAML frontmatter 可解析、`type` 非空、保留文件 index.md/log.md 结构),输出人读摘要 + JSON,退出码可 gate CI;刻意只验互通性、不验语义完整。
+- [chasedputnam/okf-cli](https://github.com/chasedputnam/okf-cli) —— **Go**,把文档站/Markdown 目录转为"扩展 OKF"bundle 并以 MCP 供 Claude/Codex/Cursor;主打"filing cabinet"架构:摘要优先导航、双向 backlink、token 预算压缩、`inspect` 在超 ~100 概念/~400K token 时提示该上 RAG。完成度较高。
+- [akdira/okf-toolkit](https://github.com/akdira/okf-toolkit) —— **Python** 全功能 CLI(已上 PyPI):init/new/validate/list/show/index/search/graph/stats,覆盖创建、校验、检索、Mermaid 链接图与统计。
+- [activetwist/OnyxWriter](https://github.com/activetwist/OnyxWriter) —— 本地优先的 OKF bundle 编辑器(Tauri 桌面壳 + Tiptap 可视化 / CodeMirror 原文双模式),带校验面板与交互式 bundle 图(含坏链高亮);现 alpha 阶段。
+- [emanueleielo/deepagents-okf-backend](https://github.com/emanueleielo/deepagents-okf-backend) —— 为 LangChain Deep Agents 提供 OKF 感知的虚拟文件系统后端(已上 PyPI):把 OKF bundle 挂成 agent 的文件系统,按 `type`/`tags`/`title` 语义查询,且每次写入都校验为合法 OKF。
+- [OpenDPP/opendpp-knowledge](https://github.com/OpenDPP/opendpp-knowledge) —— 真实 API 采用案例:把 OpenDPP(欧盟数字产品护照)Integration API 从 live OpenAPI 重新生成为 OKF bundle,每个 endpoint/schema/webhook 一篇交叉链接的 Markdown,随 API 版本刷新不漂移。
 - [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
