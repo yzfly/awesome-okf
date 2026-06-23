@@ -46,6 +46,7 @@ author: 云中江树(整理)
 - [OKF, explained(WitsCode)](https://witscode.com/open-knowledge-format) —— 开发者向的格式拆解。
 - [What is OKF? Open Knowledge Format(GitBook)](https://www.gitbook.com/blog/what-is-okf-open-knowledge-format) —— 文档平台 GitBook 官方视角:把"写给工程师/用户的同一批 Markdown"同时当作喂 agent 的知识源,解释 OKF 相对 RAG/元数据目录的"结构化遍历"优势。
 - [オープンナレッジフォーマット(OKF)解説(AI-Driven Lab, note.com)](https://note.com/ai_driven/n/n8e2726b98180?hl=en) —— 日文长文,系统讲解 OKF 的设计动机、规范与用法。
+- 社区讨论:[Google proposes Open Knowledge Format based on Markdown(Hacker News)](https://news.ycombinator.com/item?id=48517735) —— OKF 发布后的 HN 讨论串,集中呈现开发者社区对"基于 Markdown 的知识格式"的质疑与肯定,可一窥早期接受度。
 
 ## 四、生态工具与转换器(社区项目)
 
