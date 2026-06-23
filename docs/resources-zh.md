@@ -76,6 +76,8 @@ author: 云中江树(整理)
 - [W4G1/okf](https://github.com/W4G1/okf) —— **纯 Rust、零依赖**的 OKF 实现,生态里第一个系统级语言实现。
 - [inkxel/throughline](https://github.com/inkxel/throughline) —— OKF 原生的代码仓库"记忆层":让"为什么这么做"的上下文跨 AI 编码会话存活,导出为 OKF。
 - [rodcar/okf-atlas-mcp](https://github.com/rodcar/okf-atlas-mcp) —— 把 OKF bundle 暴露为 MCP server,让 agent 通过 MCP 直接查询 OKF 知识。
+- [dynamicfeed/signed-okf](https://github.com/dynamicfeed/signed-okf) —— 为 OKF bundle 加一层可验证信任:对每个文件做哈希、连同来源信息打包进 manifest 并用 Ed25519 签名(`sign_okf.py` / `verify_okf.py`),消费方可凭公钥校验"来源是否可信、内容是否被篡改"。纯附加、spec 兼容(只加可选 frontmatter 键与一个非保留名的 manifest 文件,删掉即退回普通 bundle),填补 OKF 缺失的防篡改 / 溯源空白,属少见的"信任 / 安全"方向。
+- [davebarnwell/okfdump](https://github.com/davebarnwell/okfdump) —— **Go** CLI,把 MySQL / Postgres 数据库 dump 成 OKF v0.1 bundle:为每个 schema / 表 / 列 / 外键关系各写一篇 Markdown,产物静态可提交 git、可直接喂 agent 当数据库上下文,填补"关系库 → OKF"缺口。
 - [lars20070/pdf2okf](https://github.com/lars20070/pdf2okf) —— 把 PDF 转换成 OKF 知识库的 producer。
 - [claudiobottari/databricks-okf](https://github.com/claudiobottari/databricks-okf) —— 把 Databricks AWS 官方文档经 llm-wiki 流程编译成 OKF bundle 的真实样例。
 - [dorisgyl/okf-export-pack](https://github.com/dorisgyl/okf-export-pack) —— 把 GBrain 知识导出为 OKF v0.1 bundle 的 producer 样例。
@@ -84,6 +86,7 @@ author: 云中江树(整理)
 - [akdira/okf-toolkit](https://github.com/akdira/okf-toolkit) —— **Python** 全功能 CLI(已上 PyPI):init/new/validate/list/show/index/search/graph/stats,覆盖创建、校验、检索、Mermaid 链接图与统计。
 - [activetwist/OnyxWriter](https://github.com/activetwist/OnyxWriter) —— 本地优先的 OKF bundle 编辑器(Tauri 桌面壳 + Tiptap 可视化 / CodeMirror 原文双模式),带校验面板与交互式 bundle 图(含坏链高亮);现 alpha 阶段。
 - [emanueleielo/deepagents-okf-backend](https://github.com/emanueleielo/deepagents-okf-backend) —— 为 LangChain Deep Agents 提供 OKF 感知的虚拟文件系统后端(已上 PyPI):把 OKF bundle 挂成 agent 的文件系统,按 `type`/`tags`/`title` 语义查询,且每次写入都校验为合法 OKF。
+- [EliaszDev/hermes-okf](https://github.com/EliaszDev/hermes-okf) —— 基于 OKF 的 Agent 持久记忆系统(已上 PyPI,可作 Hermes 插件):把决策 / 观察 / 上下文存为 markdown+YAML 的知识图,无需数据库、可版本化,提供 `search/list/show/snapshot/restore` 等命令,并可选接 LangChain / ChromaDB 做 RAG。新生态里 star 较突出。
 - [catancs/okf-skill](https://github.com/catancs/okf-skill) —— ⭐ OKF 工具包式 skill:校验 / 查询 / lint / 创建一站式,面向 Claude Code 工作流。本批 skill 类星标较高(~2⭐)。
 - [siculo/okf-skills](https://github.com/siculo/okf-skills) —— 创建并维护 OKF bundle 的 AI agent skills(与已收录的 scaccogatto / xSAVIKx 同名不同源)。
 - [travisjakel/okf-ingest](https://github.com/travisjakel/okf-ingest) —— 摄取工具:校验 OKF bundle 并载入 DuckDB,支持 R / Python 语义搜索,把 OKF 接到分析栈里查询。
