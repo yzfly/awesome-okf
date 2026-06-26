@@ -46,6 +46,9 @@ author: 云中江树(整理)
 - [OKF, explained(WitsCode)](https://witscode.com/open-knowledge-format) —— 开发者向的格式拆解。
 - [What is OKF? Open Knowledge Format(GitBook)](https://www.gitbook.com/blog/what-is-okf-open-knowledge-format) —— 文档平台 GitBook 官方视角:把"写给工程师/用户的同一批 Markdown"同时当作喂 agent 的知识源,解释 OKF 相对 RAG/元数据目录的"结构化遍历"优势。
 - [オープンナレッジフォーマット(OKF)解説(AI-Driven Lab, note.com)](https://note.com/ai_driven/n/n8e2726b98180?hl=en) —— 日文长文,系统讲解 OKF 的设计动机、规范与用法。
+- [Google 发布 Open Knowledge Format 入门解读(XiaoHu.AI 学院)](https://www.xiaohu.ai/c/a066c4/google-open-knowledge-format-ai) —— 简体中文入门解读,讲清 OKF 是什么、解决什么问题。
+- [OKF 白话指南:给 AI 代理读的知识包(Mason AI Lab)](https://masonailab.com/tech/google-open-knowledge-format-okf-ai-agents-2026/) —— 繁体中文白话指南,从"给 agent 读的知识包"角度拆解 OKF。
+- [Google OKF 想把 Agent 知识装进文件夹(53AI)](https://www.53ai.com/news/zhishiguanli/2026062090351.html) —— 简体中文,聚焦企业知识库场景:用 OKF 把分散知识收敛成一个文件夹喂给 agent。
 - 社区讨论:[Google proposes Open Knowledge Format based on Markdown(Hacker News)](https://news.ycombinator.com/item?id=48517735) —— OKF 发布后的 HN 讨论串,集中呈现开发者社区对"基于 Markdown 的知识格式"的质疑与肯定,可一窥早期接受度。
 
 ## 四、生态工具与转换器(社区项目)
@@ -97,6 +100,10 @@ author: 云中江树(整理)
 - [ryansann/okftool](https://github.com/ryansann/okftool) —— **Rust** 实现的可嵌入 OKF 校验器 + linter,"one core, three surfaces":同一内核分发为原生 CLI、WASM/npm 包与可嵌入 crate;内置 18 条 lint 规则、3 套 profile,已连发多个 release。工程成熟度高于一般玩具校验器,与已收录 okf-lint / WitsCode 形成 Rust 内核 + 三端分发的差异化。
 - [MartinForReal/okf-enforcer](https://github.com/MartinForReal/okf-enforcer) —— **TypeScript** Obsidian 插件,在 vault 内强制 OKF v0.1:逐笔记按 spec §9 校验 frontmatter(error/warning 分级)、全库不合规侧栏报告、状态栏指示、非破坏 auto-fix 补全缺失字段,并自动生成 §6 `index.md` 列表与 §7 `log.md` 条目;大库分批非阻塞扫描。区别于已收录 obsidian-okf 的编辑定位,主打"强制 / 治理"。
 - [knaisoma/data-olympus](https://github.com/knaisoma/data-olympus) —— **Python**,OKF 兼容的"治理级"知识库 profile(预发布):在 OKF 之上加稳定 `id`、受控 `type`/`status`/`tier` 字段与 `supersedes` 决策溯源链,配单写入者 MCP server(advisory lock + 按会话 worktree + 持久 push 队列)防多 agent 并发写入冲突,纯 git-native、无数据库。任何 OKF consumer 可读其 bundle,角度少见、有真实代码。
+- [taikunudel/wiki-as-an-mcp](https://github.com/taikunudel/wiki-as-an-mcp) —— 首个遵循 OKF 的通用 Wiki **MCP server**:把一个 OKF bundle 当 wiki 通过 MCP 暴露给 agent,让 agent 直接读写 / 检索其中知识。本批 MCP 类星标较高(~10⭐)。
+- [factile/factile](https://github.com/factile/factile) —— **local-first** 的 OKF **CLI + MCP server**:本地维护可信的 agent 上下文,既能命令行操作 bundle,也能作为 MCP server 供 agent 查询,主打"可信 / 本地"。
+- [oak-invest/kiso](https://github.com/oak-invest/kiso) —— OKF **发布引擎**:把 OKF bundle 渲染成静态网站,定位为 bundle 的"发布 / 阅读端"。
+- [mikevalstar/okq](https://github.com/mikevalstar/okq) —— **确定性** OKF CLI:快速搜索与导航 OKF 文档 bundle,强调结果稳定可复现,适合脚本化集成。
 - [killop/okf-rag](https://github.com/killop/okf-rag) —— **Rust** CLI + stdio MCP server,本地优先的 OKF/Markdown 检索系统:本地 ONNX MiniLM 嵌入(无远程 API)、zvec 向量做混合检索,文件监听变更自动重建索引,附 benchmark(Recall@1 95.35%、5.3ms)并随包发预编译二进制免编译。把"OKF→RAG"这一环补上,在生态里 star 较突出。
 - [agentic-wiki/wiki](https://github.com/agentic-wiki/wiki) —— **Go** 单文件静态二进制 CLI,管理 OKF 包:按 type/tag/path 查询、链接健康检查、列未完成任务、一致性校验(`status`/`list`/`check`/`tasks`),JSON 输出 + 脚本退出码,提供预编译二进制。Go 实现区别于已收录的 Python/JS 校验工具(同组织另有 [agentic-wiki/template](https://github.com/agentic-wiki/template) 模板仓库)。
 - [sljm12/llm_wiki_okf_web](https://github.com/sljm12/llm_wiki_okf_web) —— **Next.js + FastAPI** 的 OKF 包 Web 前端:分类浏览、BM25 全文搜索、交互式关系图、时间线视图,后端用 repository 模式抽象数据访问、可在文件系统 / PostgreSQL 后端间切换。OKF Web 浏览器形态,功能完整但仍早期。
@@ -106,6 +113,7 @@ author: 云中江树(整理)
 - [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) —— OpenCode 的持久记忆插件(EchoesVault),底层用 Google OKF 做纯 Markdown 知识库:把会话记忆 / 上下文沉淀为可版本化的 OKF bundle,跨会话存活。把 OKF 接到 OpenCode 生态的记忆层,与 hermes-okf 同属"agent 持久记忆"方向。
 - [OpenDPP/opendpp-knowledge](https://github.com/OpenDPP/opendpp-knowledge) —— 真实 API 采用案例:把 OpenDPP(欧盟数字产品护照)Integration API 从 live OpenAPI 重新生成为 OKF bundle,每个 endpoint/schema/webhook 一篇交叉链接的 Markdown,随 API 版本刷新不漂移。
 - [JayOram/MJML-ai-knowledge](https://github.com/JayOram/MJML-ai-knowledge) —— 知识库样例:把 MJML 邮件框架知识同时以 Claude skill 与 OKF bundle 两种格式发布,示范"一份知识、两种 agent 消费形态"。
+- [shuzhiyu500-sketch/openclaw-data](https://github.com/shuzhiyu500-sketch/openclaw-data) —— **中文** 知识库样例:按 OKF 规范构建、内含语义知识图谱的 Agent 知识库,展示中文场景下用 OKF 组织可供 agent 遍历的结构化知识。
 - [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)/ [betmoar/cc-okf-plugin](https://github.com/betmoar/cc-okf-plugin)(读写 / 校验 / 维护 OKF 的 Claude Code 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
