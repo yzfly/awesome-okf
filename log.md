@@ -32,3 +32,5 @@
 * **Note**: gsemet/okf-schema(0★、仅 1 commit)按信噪比不足跳过观察;agentic-wiki/skills 空仓不收。本批四候选全仓 grep 查重后均不存在,新增。
 * **Update**: resources-zh「多语言实现与更多工具」补录三类新形态——pumblus/okf-harness(面向 agent、本地优先的终端 harness,维护 OKF 兼容 LLM Wiki,v0.5.1)、JuneYaooo/lineage-skill(把视频/书/PDF/笔记蒸馏成带出处的 Agent Skill,新增 OKF 兼容知识包输出)、psinetron/echoes-vault-opencode(OpenCode 持久记忆插件 EchoesVault,底层用 OKF 做纯 Markdown 记忆库)。
 * **Note**: 本批其余候选查重后均已收录,跳过——0dust/OKFy、W4G1/okf、xSAVIKx/okf-skills、GoogleCloudPlatform/knowledge-catalog(okf 目录)、Hacker News 讨论(item 48517735)均已在列。
+* **Update**: resources-zh「多语言实现与更多工具」补录可视化建模 / 创作端——OWOX/owox-model-canvas(数据平台公司 OWOX 出品、已公网部署于 model.owox.com 的「类 Miro」可视化数据建模编辑器,TS/React/Vite/Fastify;拖拽数据集市节点与 join 关系、套行业模板、AI 生成业务问题、一键推送 OWOX Data Marts,读写 / 导出 OKF Markdown+YAML bundle 并可往返,自定位为「OKF 的可视化创作 / 导出前端」)。生态里首个成型、有公司维护的可视化建模端。
+* **Note**: 本批其余候选——gsemet/okf-schema(空壳)、scaccogatto/okf-skills(已收录旧项)、其余 0★ 玩具仓库按信噪比不足 / 查重已存在跳过。
