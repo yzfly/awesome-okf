@@ -50,6 +50,7 @@ author: 云中江树(整理)
 - [OKF 白话指南:给 AI 代理读的知识包(Mason AI Lab)](https://masonailab.com/tech/google-open-knowledge-format-okf-ai-agents-2026/) —— 繁体中文白话指南,从"给 agent 读的知识包"角度拆解 OKF。
 - [Google OKF 想把 Agent 知识装进文件夹(53AI)](https://www.53ai.com/news/zhishiguanli/2026062090351.html) —— 简体中文,聚焦企业知识库场景:用 OKF 把分散知识收敛成一个文件夹喂给 agent。
 - 社区讨论:[Google proposes Open Knowledge Format based on Markdown(Hacker News)](https://news.ycombinator.com/item?id=48517735) —— OKF 发布后的 HN 讨论串,集中呈现开发者社区对"基于 Markdown 的知识格式"的质疑与肯定,可一窥早期接受度。
+- 批判性分析:[Why an OKF knowledge base needs a metabolism, not just a body(teamdublabs/okf-operational-layer)](https://github.com/teamdublabs/okf-operational-layer) —— 观点长文:OKF 给了知识「身体(body)」却留空「新陈代谢(metabolism)」,系统性分析 ingest / 分类 / 链接 / 合成 / 时效 / 冲突消解这套运行生命周期的缺口。生态里少见的对 OKF 边界与缺口的批判性分析。
 
 ## 四、生态工具与转换器(社区项目)
 
@@ -116,6 +117,9 @@ author: 云中江树(整理)
 - [OpenDPP/opendpp-knowledge](https://github.com/OpenDPP/opendpp-knowledge) —— 真实 API 采用案例:把 OpenDPP(欧盟数字产品护照)Integration API 从 live OpenAPI 重新生成为 OKF bundle,每个 endpoint/schema/webhook 一篇交叉链接的 Markdown,随 API 版本刷新不漂移。
 - [JayOram/MJML-ai-knowledge](https://github.com/JayOram/MJML-ai-knowledge) —— 知识库样例:把 MJML 邮件框架知识同时以 Claude skill 与 OKF bundle 两种格式发布,示范"一份知识、两种 agent 消费形态"。
 - [shuzhiyu500-sketch/openclaw-data](https://github.com/shuzhiyu500-sketch/openclaw-data) —— **中文** 知识库样例:按 OKF 规范构建、内含语义知识图谱的 Agent 知识库,展示中文场景下用 OKF 组织可供 agent 遍历的结构化知识。
+- [Broccolito/BioOKF](https://github.com/Broccolito/BioOKF) —— **Rust**(v0.1.0):OKF 的首个领域化 profile(生物医学)。在 OKF 的 Markdown+YAML 基底上固定 28 种节点类型、35 种边谓词,每条 claim 强制溯源,把 OKF 收窄为受控本体 / 知识图谱;含 Rust 核心、CLI(`bokf`)、MCP server(`bokf-mcp`)与 Tauri 桌面图谱 Studio,作为一条命令安装的 Claude Code 插件分发。生态里目前唯一把 OKF 扩展成「领域 profile + 完整工具链」的项目。
+- [win4r/okf-skill](https://github.com/win4r/okf-skill) —— **Python**(零依赖,Apache-2.0):确定性的 OKF v0.1 一致性校验器,区分硬错误与 lint 警告,自带带等价性测试的 YAML mini-parser;单一 `okf.py` CLI 覆盖 scaffold / index / context / 离线 graph 可视化 / wiki→OKF 迁移,137 测试 + 3.8/3.12 CI。迄今功能最完整、测试最扎实的校验器之一(作者与已收录 okf-handoff 同一人 win4r)。
+- [dddpaul/okf-mcp-server](https://github.com/dddpaul/okf-mcp-server) —— **Python**(v0.2.0):只读 MCP server,用 OKF frontmatter(`export: true` + 非空 `type`)严格 opt-in,把仓库内 design / decisions / docs 等文件「自决」暴露为 MCP resources(URI 规则 `knowledge://{owner}/{type-slug}/{id}` 清晰),零 per-source 配置、按 git 根目录自动命名空间,只读、无写入 / 无热重载。区别于已收录 rodcar/okf-atlas-mcp(偏 bundle 检索)的「文件自决、零配置」轻量导出形态。
 - [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)/ [betmoar/cc-okf-plugin](https://github.com/betmoar/cc-okf-plugin)(读写 / 校验 / 维护 OKF 的 Claude Code 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
