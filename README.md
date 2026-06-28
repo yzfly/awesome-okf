@@ -77,25 +77,25 @@ myokf to-web ./kb -o kb.html
 
 ## OKF 热门仓库
 
-_按 GitHub star 排序,★ 数据截至 2026-06-28;完整 60+ 仓库见 [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)。_
+_★ 徽章为 GitHub 实时 star(点击进仓库);行序按 2026-06-28 的 star 快照排,完整 60+ 仓库见 [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)。_
 
 | 仓库 | ★ | 语言 | 形态 |
-|---|--:|---|---|
-| [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | 5.4k | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
-| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 242 | Python | 带出处(lineage)蒸馏的 Agent Skill,输出 OKF 包 |
-| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | 158 | TS | OpenCode 持久记忆插件,底层用 OKF |
-| [OWOX Model Canvas](./references/owox-model-canvas.md) | 41 | TS | 可视化建模 / 创作端(公司维护) |
-| [0dust/OKFy](https://github.com/0dust/OKFy) | 35 | TS | 文档 → agent 可读 OKF bundle 转换器 |
-| [okf-knowledge](./references/okf-knowledge.md) | 32 | Python | Claude Code `/okf` skill |
-| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | 18 | Python | 把仓库文档维护成 OKF 形态的 skill |
-| [hermes-okf](./references/hermes-okf.md) | 15 | Python | 基于 OKF 的 Agent 持久记忆(PyPI) |
-| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | 14 | TS | 本地优先的 agent 终端 harness |
-| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | 13 | Python | Claude Code 的 OKF 技能 |
-| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 10 | Python | 首个通用 Wiki MCP server |
-| [superops-team/okf](./references/superops-okf.md) | 10 | Go | 项目级知识库 |
-| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | 10 | Go | Go 实现的 OKF agentic skills |
-| [okf-rag](./references/okf-rag.md) | 9 | Rust | 本地优先 OKF 检索 / RAG |
-| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | 9 | JS | OKF 一致性校验器 |
+|---|---|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | [![★](https://img.shields.io/github/stars/JuneYaooo/lineage-skill?style=flat&label=%E2%98%85&color=444)](https://github.com/JuneYaooo/lineage-skill/stargazers) | Python | 带出处(lineage)蒸馏的 Agent Skill,输出 OKF 包 |
+| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | [![★](https://img.shields.io/github/stars/psinetron/echoes-vault-opencode?style=flat&label=%E2%98%85&color=444)](https://github.com/psinetron/echoes-vault-opencode/stargazers) | TS | OpenCode 持久记忆插件,底层用 OKF |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | [![★](https://img.shields.io/github/stars/OWOX/owox-model-canvas?style=flat&label=%E2%98%85&color=444)](https://github.com/OWOX/owox-model-canvas/stargazers) | TS | 可视化建模 / 创作端(公司维护) |
+| [0dust/OKFy](https://github.com/0dust/OKFy) | [![★](https://img.shields.io/github/stars/0dust/OKFy?style=flat&label=%E2%98%85&color=444)](https://github.com/0dust/OKFy/stargazers) | TS | 文档 → agent 可读 OKF bundle 转换器 |
+| [okf-knowledge](./references/okf-knowledge.md) | [![★](https://img.shields.io/github/stars/sniperunder123/okf-knowledge?style=flat&label=%E2%98%85&color=444)](https://github.com/sniperunder123/okf-knowledge/stargazers) | Python | Claude Code `/okf` skill |
+| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | [![★](https://img.shields.io/github/stars/longsizhuo/okf-frontmatter?style=flat&label=%E2%98%85&color=444)](https://github.com/longsizhuo/okf-frontmatter/stargazers) | Python | 把仓库文档维护成 OKF 形态的 skill |
+| [hermes-okf](./references/hermes-okf.md) | [![★](https://img.shields.io/github/stars/EliaszDev/hermes-okf?style=flat&label=%E2%98%85&color=444)](https://github.com/EliaszDev/hermes-okf/stargazers) | Python | 基于 OKF 的 Agent 持久记忆(PyPI) |
+| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | [![★](https://img.shields.io/github/stars/pumblus/okf-harness?style=flat&label=%E2%98%85&color=444)](https://github.com/pumblus/okf-harness/stargazers) | TS | 本地优先的 agent 终端 harness |
+| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | [![★](https://img.shields.io/github/stars/scaccogatto/okf-skills?style=flat&label=%E2%98%85&color=444)](https://github.com/scaccogatto/okf-skills/stargazers) | Python | Claude Code 的 OKF 技能 |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | [![★](https://img.shields.io/github/stars/taikunudel/wiki-as-an-mcp?style=flat&label=%E2%98%85&color=444)](https://github.com/taikunudel/wiki-as-an-mcp/stargazers) | Python | 首个通用 Wiki MCP server |
+| [superops-team/okf](./references/superops-okf.md) | [![★](https://img.shields.io/github/stars/superops-team/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/superops-team/okf/stargazers) | Go | 项目级知识库 |
+| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | [![★](https://img.shields.io/github/stars/xSAVIKx/okf-skills?style=flat&label=%E2%98%85&color=444)](https://github.com/xSAVIKx/okf-skills/stargazers) | Go | Go 实现的 OKF agentic skills |
+| [okf-rag](./references/okf-rag.md) | [![★](https://img.shields.io/github/stars/killop/okf-rag?style=flat&label=%E2%98%85&color=444)](https://github.com/killop/okf-rag/stargazers) | Rust | 本地优先 OKF 检索 / RAG |
+| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | [![★](https://img.shields.io/github/stars/Sudhakaran88/okf-conformance?style=flat&label=%E2%98%85&color=444)](https://github.com/Sudhakaran88/okf-conformance/stargazers) | JS | OKF 一致性校验器 |
 
 ## 这个仓库本身
 

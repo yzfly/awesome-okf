@@ -47,25 +47,25 @@ OKF v0.1 leaves some gaps. Three backward-compatible ideas are written up here (
 
 ## Popular repos
 
-_Sorted by GitHub stars, ★ as of 2026-06-28; the full 60+ list lives in [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)._
+_★ badges are live GitHub stars (click through to the repo); row order is a 2026-06-28 star snapshot. The full 60+ list lives in [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)._
 
 | Repo | ★ | Lang | What it is |
-|---|--:|---|---|
-| [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | 5.4k | HTML | Spec + reference impls + sample bundles |
-| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 242 | Python | Lineage-tracking distillation Agent Skill, emits OKF |
-| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | 158 | TS | OpenCode persistent-memory plugin, OKF underneath |
-| [OWOX Model Canvas](./references/owox-model-canvas.md) | 41 | TS | Visual modeling / authoring front-end |
-| [0dust/OKFy](https://github.com/0dust/OKFy) | 35 | TS | Docs → agent-readable OKF bundle converter |
-| [okf-knowledge](./references/okf-knowledge.md) | 32 | Python | Claude Code `/okf` skill |
-| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | 18 | Python | Skill that keeps repo docs in OKF shape |
-| [hermes-okf](./references/hermes-okf.md) | 15 | Python | OKF-based agent persistent memory (PyPI) |
-| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | 14 | TS | Local-first agent terminal harness |
-| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | 13 | Python | OKF skills for Claude Code |
-| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 10 | Python | First general Wiki MCP server |
-| [superops-team/okf](./references/superops-okf.md) | 10 | Go | Project-level knowledge base |
-| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | 10 | Go | OKF agentic skills in Go |
-| [okf-rag](./references/okf-rag.md) | 9 | Rust | Local-first OKF retrieval / RAG |
-| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | 9 | JS | OKF conformance checker |
+|---|---|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | Spec + reference impls + sample bundles |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | [![★](https://img.shields.io/github/stars/JuneYaooo/lineage-skill?style=flat&label=%E2%98%85&color=444)](https://github.com/JuneYaooo/lineage-skill/stargazers) | Python | Lineage-tracking distillation Agent Skill, emits OKF |
+| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | [![★](https://img.shields.io/github/stars/psinetron/echoes-vault-opencode?style=flat&label=%E2%98%85&color=444)](https://github.com/psinetron/echoes-vault-opencode/stargazers) | TS | OpenCode persistent-memory plugin, OKF underneath |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | [![★](https://img.shields.io/github/stars/OWOX/owox-model-canvas?style=flat&label=%E2%98%85&color=444)](https://github.com/OWOX/owox-model-canvas/stargazers) | TS | Visual modeling / authoring front-end |
+| [0dust/OKFy](https://github.com/0dust/OKFy) | [![★](https://img.shields.io/github/stars/0dust/OKFy?style=flat&label=%E2%98%85&color=444)](https://github.com/0dust/OKFy/stargazers) | TS | Docs → agent-readable OKF bundle converter |
+| [okf-knowledge](./references/okf-knowledge.md) | [![★](https://img.shields.io/github/stars/sniperunder123/okf-knowledge?style=flat&label=%E2%98%85&color=444)](https://github.com/sniperunder123/okf-knowledge/stargazers) | Python | Claude Code `/okf` skill |
+| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | [![★](https://img.shields.io/github/stars/longsizhuo/okf-frontmatter?style=flat&label=%E2%98%85&color=444)](https://github.com/longsizhuo/okf-frontmatter/stargazers) | Python | Skill that keeps repo docs in OKF shape |
+| [hermes-okf](./references/hermes-okf.md) | [![★](https://img.shields.io/github/stars/EliaszDev/hermes-okf?style=flat&label=%E2%98%85&color=444)](https://github.com/EliaszDev/hermes-okf/stargazers) | Python | OKF-based agent persistent memory (PyPI) |
+| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | [![★](https://img.shields.io/github/stars/pumblus/okf-harness?style=flat&label=%E2%98%85&color=444)](https://github.com/pumblus/okf-harness/stargazers) | TS | Local-first agent terminal harness |
+| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | [![★](https://img.shields.io/github/stars/scaccogatto/okf-skills?style=flat&label=%E2%98%85&color=444)](https://github.com/scaccogatto/okf-skills/stargazers) | Python | OKF skills for Claude Code |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | [![★](https://img.shields.io/github/stars/taikunudel/wiki-as-an-mcp?style=flat&label=%E2%98%85&color=444)](https://github.com/taikunudel/wiki-as-an-mcp/stargazers) | Python | First general Wiki MCP server |
+| [superops-team/okf](./references/superops-okf.md) | [![★](https://img.shields.io/github/stars/superops-team/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/superops-team/okf/stargazers) | Go | Project-level knowledge base |
+| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | [![★](https://img.shields.io/github/stars/xSAVIKx/okf-skills?style=flat&label=%E2%98%85&color=444)](https://github.com/xSAVIKx/okf-skills/stargazers) | Go | OKF agentic skills in Go |
+| [okf-rag](./references/okf-rag.md) | [![★](https://img.shields.io/github/stars/killop/okf-rag?style=flat&label=%E2%98%85&color=444)](https://github.com/killop/okf-rag/stargazers) | Rust | Local-first OKF retrieval / RAG |
+| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | [![★](https://img.shields.io/github/stars/Sudhakaran88/okf-conformance?style=flat&label=%E2%98%85&color=444)](https://github.com/Sudhakaran88/okf-conformance/stargazers) | JS | OKF conformance checker |
 
 ## Links
 
