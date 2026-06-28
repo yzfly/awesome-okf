@@ -75,6 +75,24 @@ myokf to-web ./kb -o kb.html
 - [代码支持](./docs/code-support-research-zh.md) —— 类型词表、符号引用、行号锚点
 - [HTML 一等公民](./docs/html-first-class-proposal-zh.md) —— `.html` 概念，双表示
 
+## OKF 生态仓库
+
+| 仓库 | 形态 |
+|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md)（官方） | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
+| [okf-knowledge](./references/okf-knowledge.md) | Claude Code `/okf` skill，社区星标最高 |
+| [okf-toolkit](./references/okf-toolkit.md) | Python 全功能 CLI（PyPI） |
+| [okf-cli](./references/okf-cli.md) | Go，filing cabinet 架构 + MCP |
+| [okftool](./references/okftool.md) | Rust 校验器 + linter，三端分发 |
+| [okf-rag](./references/okf-rag.md) | 本地优先 OKF 检索 / RAG（Rust） |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 首个通用 Wiki MCP server |
+| [hermes-okf](./references/hermes-okf.md) | 基于 OKF 的 Agent 持久记忆（PyPI） |
+| [deepagents-okf-backend](./references/deepagents-okf-backend.md) | LangChain Deep Agents 的 OKF 后端 |
+| [W4G1/okf](./references/w4g1-okf.md) | 纯 Rust 零依赖，首个系统级实现 |
+| [superops-team/okf](./references/superops-okf.md) | Go，项目级知识库 |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | 可视化建模 / 创作端（公司维护） |
+| [kiso](./references/kiso.md) | OKF 发布引擎，渲染静态站 |
+
 ## 这个仓库本身
 
 是一个符合 OKF v0.1 的 bundle。每个 `.md` 带 frontmatter 和非空 `type`，根目录有 `index.md` 和 `log.md`：

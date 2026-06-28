@@ -45,6 +45,24 @@ OKF v0.1 leaves some gaps. Three backward-compatible ideas are written up here (
 - code support — type vocabulary, `language`/`symbol`/`signature`, line anchors, typed links (see the [research note](./docs/code-support-research-zh.md))
 - HTML as a concept type (see the [proposal](./docs/html-first-class-proposal-zh.md))
 
+## Ecosystem repos
+
+| Repo | What it is |
+|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | Spec + reference impls + sample bundles |
+| [okf-knowledge](./references/okf-knowledge.md) | Claude Code `/okf` skill, top-starred |
+| [okf-toolkit](./references/okf-toolkit.md) | Full-feature Python CLI (PyPI) |
+| [okf-cli](./references/okf-cli.md) | Go, filing-cabinet architecture + MCP |
+| [okftool](./references/okftool.md) | Rust validator + linter, three surfaces |
+| [okf-rag](./references/okf-rag.md) | Local-first OKF retrieval / RAG (Rust) |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | First general Wiki MCP server |
+| [hermes-okf](./references/hermes-okf.md) | OKF-based agent persistent memory (PyPI) |
+| [deepagents-okf-backend](./references/deepagents-okf-backend.md) | OKF backend for LangChain Deep Agents |
+| [W4G1/okf](./references/w4g1-okf.md) | Pure Rust, zero-dep, first systems-level impl |
+| [superops-team/okf](./references/superops-okf.md) | Go, project-level knowledge base |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | Visual modeling / authoring front-end |
+| [kiso](./references/kiso.md) | OKF publishing engine, static site |
+
 ## Links
 
 Official: [spec](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) · [repo](https://github.com/GoogleCloudPlatform/knowledge-catalog) · [launch blog](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/). Lineage: [Karpathy's LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).

@@ -38,6 +38,7 @@ okf_version: "0.1"
 * [Metadata as Code](references/metadata-as-code.md) - kcmd / mdcode
 * [Karpathy 的 LLM Wiki](references/karpathy-llm-wiki.md) - OKF 思想源头
 * [qmd](references/qmd.md) - Markdown 本地搜索,可作 consumer 后端
+* [社区头部工具与实现](references/index.md) - 12 个按 star/成熟度择优、提升为一等概念的社区仓库(okf-knowledge / okf-rag / wiki-as-an-mcp / owox-model-canvas 等);完整 60+ 清单见 [resources-zh](docs/resources-zh.md)
 
 # Skills(skills/)
 
