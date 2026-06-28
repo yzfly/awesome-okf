@@ -40,8 +40,10 @@ author: 云中江树(整理)
 - [A Standard, or Just a Folder?(Marc Bara, Medium)](https://medium.com/@marc.bara.iniesta/googles-new-format-for-agent-context-a-standard-or-just-a-folder-82fb21d92041) —— 批判性分析:OKF 统一了"包"的结构,却刻意不统一类型/链接词表,"格式互通 ≠ 语义互通"。
 - [The Open Standard That Frees Your AI Knowledge(innFactory)](https://innfactory.ai/en/blog/open-knowledge-format-okf-standard-for-ai-knowledge/) —— 面向企业:用 OKF 把分散在 Confluence/代码库/wiki 的知识收敛为可版本化、跨厂商互通的 bundle。
 - 采用信号:[Hugo Issue #15035 — Support OKF](https://github.com/gohugoio/hugo/issues/15035) —— 静态站点生成器 Hugo 关于支持 OKF 的兼容讨论,生态采纳的早期迹象。
+- 采用信号:[Stashpad 适配 OKF 规范(Obsidian 论坛)](https://forum.obsidian.md/t/stashpad-updated-for-googles-open-knowledge-format-spec/115317) —— Markdown 笔记工具 Stashpad 宣布支持 OKF:本就以"一文件一笔记 + YAML frontmatter"存储,新增按文件夹 opt-in、命名空间字段(`okfType` 等防冲突),导出时映射回 OKF 标准键(`type`/`title`/…)并把层级转成相对 Markdown 互链,可无损往返。第三方笔记工具主动适配 OKF 的早期采用案例(alpha)。
 - [Google Cloud Introduces OKF: A Vendor-Neutral Markdown Spec(MarkTechPost)](https://www.marktechpost.com/2026/06/16/google-cloud-introduces-open-knowledge-format-okf-a-vendor-neutral-markdown-spec-for-giving-ai-agents-curated-context/) —— 偏技术的规范解读:强调"厂商中立、给 agent 喂精选上下文",并梳理参考实现(富化 agent + 可视化器)与三份官方样例 bundle。
 - [What It Is, the Spec, and How to Use It(StartupHub.ai)](https://www.startuphub.ai/ai-news/insights/2026/google-open-knowledge-format-okf-explained-2026) —— 从"是什么 / 规范字段 / 怎么用"三段式讲清 OKF,适合入门。
+- [Google Just Standardized Karpathy's LLM Wiki Pattern(The Menon Lab)](https://themenonlab.blog/blog/google-okf-open-knowledge-format-karpathy-llm-wiki-standard) —— 把 OKF 放在"Google 把 Karpathy 的 LLM Wiki 模式标准化"的脉络里解读:格式刻意极简(仅 `type` 必填),既可看作把社区最佳实践民主化,也可看作对 Obsidian 等既有 Markdown+YAML 实践的"收编"。
 - [The Markdown Standard That Could Replace Your Wiki(Flowtivity)](https://flowtivity.ai/blog/google-open-knowledge-format/) —— 把 OKF 放在"替代传统 wiki"的角度解读。
 - [OKF, explained(WitsCode)](https://witscode.com/open-knowledge-format) —— 开发者向的格式拆解。
 - [What is OKF? Open Knowledge Format(GitBook)](https://www.gitbook.com/blog/what-is-okf-open-knowledge-format) —— 文档平台 GitBook 官方视角:把"写给工程师/用户的同一批 Markdown"同时当作喂 agent 的知识源,解释 OKF 相对 RAG/元数据目录的"结构化遍历"优势。
@@ -50,6 +52,7 @@ author: 云中江树(整理)
 - [OKF 白话指南:给 AI 代理读的知识包(Mason AI Lab)](https://masonailab.com/tech/google-open-knowledge-format-okf-ai-agents-2026/) —— 繁体中文白话指南,从"给 agent 读的知识包"角度拆解 OKF。
 - [Google OKF 想把 Agent 知识装进文件夹(53AI)](https://www.53ai.com/news/zhishiguanli/2026062090351.html) —— 简体中文,聚焦企业知识库场景:用 OKF 把分散知识收敛成一个文件夹喂给 agent。
 - 社区讨论:[Google proposes Open Knowledge Format based on Markdown(Hacker News)](https://news.ycombinator.com/item?id=48517735) —— OKF 发布后的 HN 讨论串,集中呈现开发者社区对"基于 Markdown 的知识格式"的质疑与肯定,可一窥早期接受度。
+- 社区讨论:[OKF linter 讨论(Hacker News)](https://news.ycombinator.com/item?id=48643541) —— 围绕 OKF linter / 一致性校验的 HN 讨论串,反映社区对"如何校验一个 bundle 是否合规"的关注,与本仓库收录的 okf-lint / okf-conformance / WitsCode 等校验工具呼应。
 - 批判性分析:[Why an OKF knowledge base needs a metabolism, not just a body(teamdublabs/okf-operational-layer)](https://github.com/teamdublabs/okf-operational-layer) —— 观点长文:OKF 给了知识「身体(body)」却留空「新陈代谢(metabolism)」,系统性分析 ingest / 分类 / 链接 / 合成 / 时效 / 冲突消解这套运行生命周期的缺口。生态里少见的对 OKF 边界与缺口的批判性分析。
 
 ## 四、生态工具与转换器(社区项目)
@@ -97,7 +100,10 @@ author: 云中江树(整理)
 - [siculo/okf-skills](https://github.com/siculo/okf-skills) —— 创建并维护 OKF bundle 的 AI agent skills(与已收录的 scaccogatto / xSAVIKx 同名不同源)。
 - [travisjakel/okf-ingest](https://github.com/travisjakel/okf-ingest) —— 摄取工具:校验 OKF bundle 并载入 DuckDB,支持 R / Python 语义搜索,把 OKF 接到分析栈里查询。
 - [chntnm/akasha](https://github.com/chntnm/akasha) —— 3D WebGL 知识图谱浏览器,可加载 OKF bundle 做沉浸式概念关系浏览。
+- [opticsWolf/OKFgraph](https://github.com/opticsWolf/OKFgraph) —— **Python** 的 OKF 知识图谱:LadybugDB 存储 + Jina v5 ONNX 嵌入,RRF 混合检索 + 图遍历,v4.0 起支持多模态图片摄取(三种摄取模式)。把 OKF bundle 升级成可语义检索 + 图遍历的知识图谱,且引入图片多模态摄取,在生态里少见。
 - [ryansann/okfview](https://github.com/ryansann/okfview) —— 轻量 OKF 查看器,渲染并导航 bundle 内容。
+- [nsoybean/okf-ui](https://github.com/nsoybean/okf-ui) —— **TypeScript** 的 OKF 通用 UI:渲染并浏览 OKF bundle,补 Web 前端形态。
+- [mattjoyce/okf-skill](https://github.com/mattjoyce/okf-skill) —— **Python** 的 Claude Code OKF skill,把知识当作「目录 + Markdown + YAML frontmatter」创建 / 维护(与已收录 catancs / siculo / scaccogatto 等同名不同源)。
 - [ryansann/okftool](https://github.com/ryansann/okftool) —— **Rust** 实现的可嵌入 OKF 校验器 + linter,"one core, three surfaces":同一内核分发为原生 CLI、WASM/npm 包与可嵌入 crate;内置 18 条 lint 规则、3 套 profile,已连发多个 release。工程成熟度高于一般玩具校验器,与已收录 okf-lint / WitsCode 形成 Rust 内核 + 三端分发的差异化。
 - [MartinForReal/okf-enforcer](https://github.com/MartinForReal/okf-enforcer) —— **TypeScript** Obsidian 插件,在 vault 内强制 OKF v0.1:逐笔记按 spec §9 校验 frontmatter(error/warning 分级)、全库不合规侧栏报告、状态栏指示、非破坏 auto-fix 补全缺失字段,并自动生成 §6 `index.md` 列表与 §7 `log.md` 条目;大库分批非阻塞扫描。区别于已收录 obsidian-okf 的编辑定位,主打"强制 / 治理"。
 - [knaisoma/data-olympus](https://github.com/knaisoma/data-olympus) —— **Python**,OKF 兼容的"治理级"知识库 profile(预发布):在 OKF 之上加稳定 `id`、受控 `type`/`status`/`tier` 字段与 `supersedes` 决策溯源链,配单写入者 MCP server(advisory lock + 按会话 worktree + 持久 push 队列)防多 agent 并发写入冲突,纯 git-native、无数据库。任何 OKF consumer 可读其 bundle,角度少见、有真实代码。
