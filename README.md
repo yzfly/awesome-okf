@@ -77,8 +77,6 @@ myokf to-web ./kb -o kb.html
 
 ## OKF 热门仓库
 
-_★ 徽章为 GitHub 实时 star(点击进仓库);行序按 2026-06-28 的 star 快照排,完整 60+ 仓库见 [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)。_
-
 | 仓库 | ★ | 语言 | 形态 |
 |---|---|---|---|
 | [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |

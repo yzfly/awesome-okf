@@ -47,8 +47,6 @@ OKF v0.1 leaves some gaps. Three backward-compatible ideas are written up here (
 
 ## Popular repos
 
-_★ badges are live GitHub stars (click through to the repo); row order is a 2026-06-28 star snapshot. The full 60+ list lives in [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)._
-
 | Repo | ★ | Lang | What it is |
 |---|---|---|---|
 | [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | Spec + reference impls + sample bundles |
