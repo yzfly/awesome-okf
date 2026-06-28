@@ -45,23 +45,27 @@ OKF v0.1 leaves some gaps. Three backward-compatible ideas are written up here (
 - code support — type vocabulary, `language`/`symbol`/`signature`, line anchors, typed links (see the [research note](./docs/code-support-research-zh.md))
 - HTML as a concept type (see the [proposal](./docs/html-first-class-proposal-zh.md))
 
-## Ecosystem repos
+## Popular repos
 
-| Repo | What it is |
-|---|---|
-| [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | Spec + reference impls + sample bundles |
-| [okf-knowledge](./references/okf-knowledge.md) | Claude Code `/okf` skill, top-starred |
-| [okf-toolkit](./references/okf-toolkit.md) | Full-feature Python CLI (PyPI) |
-| [okf-cli](./references/okf-cli.md) | Go, filing-cabinet architecture + MCP |
-| [okftool](./references/okftool.md) | Rust validator + linter, three surfaces |
-| [okf-rag](./references/okf-rag.md) | Local-first OKF retrieval / RAG (Rust) |
-| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | First general Wiki MCP server |
-| [hermes-okf](./references/hermes-okf.md) | OKF-based agent persistent memory (PyPI) |
-| [deepagents-okf-backend](./references/deepagents-okf-backend.md) | OKF backend for LangChain Deep Agents |
-| [W4G1/okf](./references/w4g1-okf.md) | Pure Rust, zero-dep, first systems-level impl |
-| [superops-team/okf](./references/superops-okf.md) | Go, project-level knowledge base |
-| [OWOX Model Canvas](./references/owox-model-canvas.md) | Visual modeling / authoring front-end |
-| [kiso](./references/kiso.md) | OKF publishing engine, static site |
+_Sorted by GitHub stars, ★ as of 2026-06-28; the full 60+ list lives in [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)._
+
+| Repo | ★ | Lang | What it is |
+|---|--:|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md) (official) | 5.4k | HTML | Spec + reference impls + sample bundles |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 242 | Python | Lineage-tracking distillation Agent Skill, emits OKF |
+| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | 158 | TS | OpenCode persistent-memory plugin, OKF underneath |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | 41 | TS | Visual modeling / authoring front-end |
+| [0dust/OKFy](https://github.com/0dust/OKFy) | 35 | TS | Docs → agent-readable OKF bundle converter |
+| [okf-knowledge](./references/okf-knowledge.md) | 32 | Python | Claude Code `/okf` skill |
+| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | 18 | Python | Skill that keeps repo docs in OKF shape |
+| [hermes-okf](./references/hermes-okf.md) | 15 | Python | OKF-based agent persistent memory (PyPI) |
+| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | 14 | TS | Local-first agent terminal harness |
+| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | 13 | Python | OKF skills for Claude Code |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 10 | Python | First general Wiki MCP server |
+| [superops-team/okf](./references/superops-okf.md) | 10 | Go | Project-level knowledge base |
+| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | 10 | Go | OKF agentic skills in Go |
+| [okf-rag](./references/okf-rag.md) | 9 | Rust | Local-first OKF retrieval / RAG |
+| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | 9 | JS | OKF conformance checker |
 
 ## Links
 

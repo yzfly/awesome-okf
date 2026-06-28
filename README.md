@@ -75,23 +75,27 @@ myokf to-web ./kb -o kb.html
 - [代码支持](./docs/code-support-research-zh.md) —— 类型词表、符号引用、行号锚点
 - [HTML 一等公民](./docs/html-first-class-proposal-zh.md) —— `.html` 概念，双表示
 
-## OKF 生态仓库
+## OKF 热门仓库
 
-| 仓库 | 形态 |
-|---|---|
-| [knowledge-catalog](./references/knowledge-catalog-repo.md)（官方） | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
-| [okf-knowledge](./references/okf-knowledge.md) | Claude Code `/okf` skill，社区星标最高 |
-| [okf-toolkit](./references/okf-toolkit.md) | Python 全功能 CLI（PyPI） |
-| [okf-cli](./references/okf-cli.md) | Go，filing cabinet 架构 + MCP |
-| [okftool](./references/okftool.md) | Rust 校验器 + linter，三端分发 |
-| [okf-rag](./references/okf-rag.md) | 本地优先 OKF 检索 / RAG（Rust） |
-| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 首个通用 Wiki MCP server |
-| [hermes-okf](./references/hermes-okf.md) | 基于 OKF 的 Agent 持久记忆（PyPI） |
-| [deepagents-okf-backend](./references/deepagents-okf-backend.md) | LangChain Deep Agents 的 OKF 后端 |
-| [W4G1/okf](./references/w4g1-okf.md) | 纯 Rust 零依赖，首个系统级实现 |
-| [superops-team/okf](./references/superops-okf.md) | Go，项目级知识库 |
-| [OWOX Model Canvas](./references/owox-model-canvas.md) | 可视化建模 / 创作端（公司维护） |
-| [kiso](./references/kiso.md) | OKF 发布引擎，渲染静态站 |
+_按 GitHub star 排序,★ 数据截至 2026-06-28;完整 60+ 仓库见 [resources-zh](./docs/resources-zh.md#四生态工具与转换器社区项目)。_
+
+| 仓库 | ★ | 语言 | 形态 |
+|---|--:|---|---|
+| [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | 5.4k | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 242 | Python | 带出处(lineage)蒸馏的 Agent Skill,输出 OKF 包 |
+| [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | 158 | TS | OpenCode 持久记忆插件,底层用 OKF |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | 41 | TS | 可视化建模 / 创作端(公司维护) |
+| [0dust/OKFy](https://github.com/0dust/OKFy) | 35 | TS | 文档 → agent 可读 OKF bundle 转换器 |
+| [okf-knowledge](./references/okf-knowledge.md) | 32 | Python | Claude Code `/okf` skill |
+| [longsizhuo/okf-frontmatter](https://github.com/longsizhuo/okf-frontmatter) | 18 | Python | 把仓库文档维护成 OKF 形态的 skill |
+| [hermes-okf](./references/hermes-okf.md) | 15 | Python | 基于 OKF 的 Agent 持久记忆(PyPI) |
+| [pumblus/okf-harness](https://github.com/pumblus/okf-harness) | 14 | TS | 本地优先的 agent 终端 harness |
+| [scaccogatto/okf-skills](https://github.com/scaccogatto/okf-skills) | 13 | Python | Claude Code 的 OKF 技能 |
+| [wiki-as-an-mcp](./references/wiki-as-an-mcp.md) | 10 | Python | 首个通用 Wiki MCP server |
+| [superops-team/okf](./references/superops-okf.md) | 10 | Go | 项目级知识库 |
+| [xSAVIKx/okf-skills](https://github.com/xSAVIKx/okf-skills) | 10 | Go | Go 实现的 OKF agentic skills |
+| [okf-rag](./references/okf-rag.md) | 9 | Rust | 本地优先 OKF 检索 / RAG |
+| [Sudhakaran88/okf-conformance](https://github.com/Sudhakaran88/okf-conformance) | 9 | JS | OKF 一致性校验器 |
 
 ## 这个仓库本身
 
