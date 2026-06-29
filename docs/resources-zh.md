@@ -101,6 +101,8 @@ author: 云中江树(整理)
 - [travisjakel/okf-ingest](https://github.com/travisjakel/okf-ingest) —— 摄取工具:校验 OKF bundle 并载入 DuckDB,支持 R / Python 语义搜索,把 OKF 接到分析栈里查询。
 - [chntnm/akasha](https://github.com/chntnm/akasha) —— 3D WebGL 知识图谱浏览器,可加载 OKF bundle 做沉浸式概念关系浏览。
 - [opticsWolf/OKFgraph](https://github.com/opticsWolf/OKFgraph) —— **Python** 的 OKF 知识图谱:LadybugDB 存储 + Jina v5 ONNX 嵌入,RRF 混合检索 + 图遍历,v4.0 起支持多模态图片摄取(三种摄取模式)。把 OKF bundle 升级成可语义检索 + 图遍历的知识图谱,且引入图片多模态摄取,在生态里少见。
+- [arhuman/mnemos](https://github.com/arhuman/mnemos) —— **Go**(MIT,单二进制零依赖):本地优先的 AI agent 记忆 **MCP server**,原生理解 OKF bundle 并把 OKF 的 `tags`/`type` 当作全文检索的排序信号,返回结果带 `file#section` + 行号的可核验来源引用。工程扎实:SQLite FTS5/bm25 默认开箱、可选本地语义 + 混合检索(build tag)、文件增量监听、写入 secret 扫描、路径隔离、只读 + 写回安全门,附检索评测。区别于已收录记忆类(hermes-okf / data-olympus / echoes-vault)的是把 OKF 当**一等检索信号**,生态里少见。
+- [Yefclub/lume](https://github.com/Yefclub/lume) —— **Rust + Tauri 2 + React** 的本地优先桌面「第二大脑」:纯端侧 AI 读写 OKF 格式知识库,内置 Gemma 3n 本地推理 + Whisper 语音转写 + 混合检索(全文 + 语义 + 链接图),数据全程不出本机。生态里唯一「OKF + 端侧 LLM」桌面 app(非 CLI/skill),有文档化的架构决策(`docs/DECISIONS.md`),代表 OKF 桌面端侧的新方向。
 - [ryansann/okfview](https://github.com/ryansann/okfview) —— 轻量 OKF 查看器,渲染并导航 bundle 内容。
 - [nsoybean/okf-ui](https://github.com/nsoybean/okf-ui) —— **TypeScript** 的 OKF 通用 UI:渲染并浏览 OKF bundle,补 Web 前端形态。
 - [mattjoyce/okf-skill](https://github.com/mattjoyce/okf-skill) —— **Python** 的 Claude Code OKF skill,把知识当作「目录 + Markdown + YAML frontmatter」创建 / 维护(与已收录 catancs / siculo / scaccogatto 等同名不同源)。
