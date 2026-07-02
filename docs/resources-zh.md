@@ -40,6 +40,7 @@ author: 云中江树(整理)
 - [OKF: Google's New Markdown Format for AI Agents(Suganthan)](https://suganthan.com/blog/open-knowledge-format/) —— 面向开发者的格式解读。
 - [OKF: Google AI Agent Standard(explainx.ai)](https://explainx.ai/blog/google-open-knowledge-format-okf-ai-agents-2026) —— OKF 作为 AI agent 知识标准的科普解读。
 - [构建一个 OKF Claude Code 插件(ap7i.com)](https://ap7i.com/posts/open-knowledge-format-okf-claude-code-plugin/) —— 实践反思:作者实现了一个 `okf-author` 的 Claude Code 插件(创作 / 转换 / 校验 OKF bundle),并借此谈一个极简、低摩擦的格式如何弥合「人写的文档」与「agent 可读」之间的鸿沟。
+- [用 11ty 发布 OKF bundle(Simon Cox)](https://www.simoncox.com/post/2026-06-17-publishing-an-okf-bundle-with-11ty/) —— 实操教程:用 11ty(Eleventy)静态站点生成器把内容发布为符合 OKF v0.1 的 bundle,给出 `okf-index` / `okf-articles` / `okf-log` 三套模板、用过滤器剥离 frontmatter,并结合 `llms.txt` / `robots.txt` / meta link 让 agent 与 LLM 可发现。把"既有站点 → OKF 发布端"这一环讲透。
 - [A Standard, or Just a Folder?(Marc Bara, Medium)](https://medium.com/@marc.bara.iniesta/googles-new-format-for-agent-context-a-standard-or-just-a-folder-82fb21d92041) —— 批判性分析:OKF 统一了"包"的结构,却刻意不统一类型/链接词表,"格式互通 ≠ 语义互通"。
 - [The Open Standard That Frees Your AI Knowledge(innFactory)](https://innfactory.ai/en/blog/open-knowledge-format-okf-standard-for-ai-knowledge/) —— 面向企业:用 OKF 把分散在 Confluence/代码库/wiki 的知识收敛为可版本化、跨厂商互通的 bundle。
 - 采用信号:[Hugo Issue #15035 — Support OKF](https://github.com/gohugoio/hugo/issues/15035) —— 静态站点生成器 Hugo 关于支持 OKF 的兼容讨论,生态采纳的早期迹象。
