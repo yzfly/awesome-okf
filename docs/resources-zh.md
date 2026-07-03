@@ -104,6 +104,7 @@ author: 云中江树(整理)
 - [catancs/okf-skill](https://github.com/catancs/okf-skill) —— ⭐ OKF 工具包式 skill:校验 / 查询 / lint / 创建一站式,面向 Claude Code 工作流。本批 skill 类星标较高(~2⭐)。
 - [siculo/okf-skills](https://github.com/siculo/okf-skills) —— 创建并维护 OKF bundle 的 AI agent skills(与已收录的 scaccogatto / xSAVIKx 同名不同源)。
 - [travisjakel/okf-ingest](https://github.com/travisjakel/okf-ingest) —— 摄取工具:校验 OKF bundle 并载入 DuckDB,支持 R / Python 语义搜索,把 OKF 接到分析栈里查询。
+- [travisjakel/okf-mcp](https://github.com/travisjakel/okf-mcp) —— 与 okf-ingest 同源的 MCP server:把 okf-ingest 那套确定性 consume 动词(`context` / `search` / `impact` / `diff` / `doctor`)包成 MCP 工具供 agent 调用,让 agent 直接对 OKF bundle 做上下文取用、检索、影响分析、差异与体检。补 okf-ingest 的「agent 接入」一环。
 - [chntnm/akasha](https://github.com/chntnm/akasha) —— 3D WebGL 知识图谱浏览器,可加载 OKF bundle 做沉浸式概念关系浏览。
 - [opticsWolf/OKFgraph](https://github.com/opticsWolf/OKFgraph) —— **Python** 的 OKF 知识图谱:LadybugDB 存储 + Jina v5 ONNX 嵌入,RRF 混合检索 + 图遍历,v4.0 起支持多模态图片摄取(三种摄取模式)。把 OKF bundle 升级成可语义检索 + 图遍历的知识图谱,且引入图片多模态摄取,在生态里少见。
 - [arhuman/mnemos](https://github.com/arhuman/mnemos) —— **Go**(MIT,单二进制零依赖):本地优先的 AI agent 记忆 **MCP server**,原生理解 OKF bundle 并把 OKF 的 `tags`/`type` 当作全文检索的排序信号,返回结果带 `file#section` + 行号的可核验来源引用。工程扎实:SQLite FTS5/bm25 默认开箱、可选本地语义 + 混合检索(build tag)、文件增量监听、写入 secret 扫描、路径隔离、只读 + 写回安全门,附检索评测。区别于已收录记忆类(hermes-okf / data-olympus / echoes-vault)的是把 OKF 当**一等检索信号**,生态里少见。
@@ -130,6 +131,8 @@ author: 云中江树(整理)
 - [OpenDPP/opendpp-knowledge](https://github.com/OpenDPP/opendpp-knowledge) —— 真实 API 采用案例:把 OpenDPP(欧盟数字产品护照)Integration API 从 live OpenAPI 重新生成为 OKF bundle,每个 endpoint/schema/webhook 一篇交叉链接的 Markdown,随 API 版本刷新不漂移。
 - [JayOram/MJML-ai-knowledge](https://github.com/JayOram/MJML-ai-knowledge) —— 知识库样例:把 MJML 邮件框架知识同时以 Claude skill 与 OKF bundle 两种格式发布,示范"一份知识、两种 agent 消费形态"。
 - [shuzhiyu500-sketch/openclaw-data](https://github.com/shuzhiyu500-sketch/openclaw-data) —— **中文** 知识库样例:按 OKF 规范构建、内含语义知识图谱的 Agent 知识库,展示中文场景下用 OKF 组织可供 agent 遍历的结构化知识。
+- [coleam00/cole-medin-ai-coding](https://github.com/coleam00/cole-medin-ai-coding) —— 知识库样例:把 Cole Medin 的一批 AI 编程视频整理成经字幕核验(transcript-verified)的 OKF bundle,可挂进任意「AI 第二大脑」深度检索。真实内容策展为 OKF 的样例,本批 star 较高。
+- [msradam/cobol-wiki](https://github.com/msradam/cobol-wiki) —— 知识库样例:把 Open Mainframe Project 的 COBOL 编程课程逐字(verbatim)整理成合规 OKF bundle,示范把既有课程 / 教材原样迁进 OKF。与 databricks-okf(官方文档 → OKF)同属「既有资料 → OKF」样例。
 - [TechSoup/okf-civic-sample](https://github.com/TechSoup/okf-civic-sample) —— TechSoup 官方出品的「公民社会知识」OKF 参考样例 bundle(同时是 Obsidian vault):用 OKF 表示社区资源 / 非营利技术供给,自称首个此类公民社会参考,并提出一个轻量「civic profile」扩展(v0.5)处理资格、资源关系等非营利特有需求。官方机构维护的领域样例。
 - [nothans/abode101](https://github.com/nothans/abode101)(★5)—— 教学样例:用 OKF + Karpathy LLM Wiki 模式把「了解自己的房子」做成可 fork 的脚手架——把家居物品 / 维护计划 / 维修记录写成带引用的 Markdown,agent 据此回答并在信息缺失时拒绝臆测;公开框架文件、playbook、评估用例与模板,真实房屋数据 gitignore。本批新增里 star 最高,主打「教 OKF 模式」。
 - [Broccolito/BioOKF](https://github.com/Broccolito/BioOKF) —— **Rust**(v0.1.0):OKF 的首个领域化 profile(生物医学)。在 OKF 的 Markdown+YAML 基底上固定 28 种节点类型、35 种边谓词,每条 claim 强制溯源,把 OKF 收窄为受控本体 / 知识图谱;含 Rust 核心、CLI(`bokf`)、MCP server(`bokf-mcp`)与 Tauri 桌面图谱 Studio,作为一条命令安装的 Claude Code 插件分发。生态里目前唯一把 OKF 扩展成「领域 profile + 完整工具链」的项目。
@@ -143,6 +146,10 @@ author: 云中江树(整理)
 - [UtakataKyosui/scrinium](https://github.com/UtakataKyosui/scrinium) —— **Rust**(v1.0.0):管理 OKF Markdown 文档的 CLI + TUI,自动生成 UUID / 时间戳、校验 frontmatter、生成 index 与 changelog、导出知识图,并带一个交互式三栏终端编辑器。区别于已收录纯 CLI / 校验器的是带 TUI 编辑形态(起步阶段)。
 - [guhcostan/claude-mega-brain](https://github.com/guhcostan/claude-mega-brain) —— **Python**(~58⭐):Claude Code 插件,扫描带 YAML frontmatter 的 Markdown(以 `type:` 标注 BigQuery 表 / 指标 / API 等),在每次会话启动时把项目知识库自动注入上下文,让 Claude 不调工具即可回答项目专属问题;实现 OKF 标准,附 benchmark(对比 Obsidian+MCP 称「100% 准确·0 次工具调用」、较裸文件省约 66% token)、迁移工具与 CI/CD。本批 Claude Code 集成类星标较高。
 - [thisismydesign/okf-lint](https://github.com/thisismydesign/okf-lint)(TS linter)/ [okfcli/okf](https://github.com/okfcli/okf)(Go CLI 工具链,带 [落地页](https://github.com/okfcli/okf-site))/ [theesfeld/claude-okf](https://github.com/theesfeld/claude-okf)(skill + 审计 agent + 会话 hook 的 Claude Code 插件)/ [wooserv/wp-knowledge-layer](https://github.com/wooserv/wp-knowledge-layer)(把内容转成 OKF 的 WordPress 插件)/ [betmoar/cc-okf-plugin](https://github.com/betmoar/cc-okf-plugin)(读写 / 校验 / 维护 OKF 的 Claude Code 插件)—— 同期涌现的 lint / CLI / 插件类项目,尚处早期,一并存档。
+- [mitchellvanrijkom/okf-kit](https://github.com/mitchellvanrijkom/okf-kit) —— 零依赖轻量工具包:对纯 Markdown 的 OKF bundle 做索引 / 链接 / lint 与渐进式披露(progressive-disclosure)导航,无数据库、无嵌入、无 API key。定位与 okf-mcp-server 之类的重栈相反,主打「只靠 Markdown 就够用」的极简一环。
+- [vickypandey14/Git2OKF](https://github.com/vickypandey14/Git2OKF) —— 把 Git 仓库转成 OKF bundle 的 producer:面向语义代码理解与知识图谱生成,让 agent 以 OKF 形态读懂一个代码库。与已收录的 tommypacker/okf-generator、inkxel/throughline 同属「代码库 → OKF」方向。
+- [oussamachaabounii/okapi](https://github.com/oussamachaabounii/okapi) —— 用 **Claude Agent SDK** 把代码库逆向工程成 OKF bundle:由 agent 自主遍历、理解代码并产出符合 OKF 的知识包。区别于确定性抽取的 Git2OKF / okf-generator,主打「agent 驱动的逆向工程」。
+- [ThomasRohde/okf-bundle-smith](https://github.com/ThomasRohde/okf-bundle-smith) —— 以 **Codex 插件市场**形式分发的 OKF bundle 工具:创建 / 校验 / 可视化 / 打包 OKF bundle,附 skills 与 MCP 工具。生态里少见的面向 Codex(而非 Claude Code)的 OKF 插件形态。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
 
