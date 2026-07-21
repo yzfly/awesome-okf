@@ -150,6 +150,7 @@ author: 云中江树(整理)
 - [vickypandey14/Git2OKF](https://github.com/vickypandey14/Git2OKF) —— 把 Git 仓库转成 OKF bundle 的 producer:面向语义代码理解与知识图谱生成,让 agent 以 OKF 形态读懂一个代码库。与已收录的 tommypacker/okf-generator、inkxel/throughline 同属「代码库 → OKF」方向。
 - [oussamachaabounii/okapi](https://github.com/oussamachaabounii/okapi) —— 用 **Claude Agent SDK** 把代码库逆向工程成 OKF bundle:由 agent 自主遍历、理解代码并产出符合 OKF 的知识包。区别于确定性抽取的 Git2OKF / okf-generator,主打「agent 驱动的逆向工程」。
 - [ThomasRohde/okf-bundle-smith](https://github.com/ThomasRohde/okf-bundle-smith) —— 以 **Codex 插件市场**形式分发的 OKF bundle 工具:创建 / 校验 / 可视化 / 打包 OKF bundle,附 skills 与 MCP 工具。生态里少见的面向 Codex(而非 Claude Code)的 OKF 插件形态。
+- [serradura/okf-gem](https://github.com/serradura/okf-gem)([站点](https://okfgem.com) / [在线 demo](https://demo.okfgem.com))—— **Ruby**(Apache-2.0,已上 RubyGems:`gem install okf`):覆盖 bundle **全生命周期**的 harness,生态里工具多只占一端(写 / 校验 / 看),它把环路合上。**Agent skill** 从既有代码与文档里创作并持续维护概念,人保留编辑权;**CLI / 库**给 agent 与 CI 一个确定性判据——`validate` 只判 v0.1 §9 硬合规、`lint` 只报策展质量,两者刻意分开(§9 本就要求 consumer 容忍坏链),另有排序检索 `search` 与 `index`/`dirs`/`types`/`tags`/`catalog`/`graph` 等视图(全部可 `--json`),亦可作库在进程内调用;**图谱**由 `okf server` 起交互式页面、`okf render` 导出单文件自包含静态 HTML,服务端是可挂载的 **Rack app**(能嵌进 Rails 路由)。per-user registry 给 bundle 起名(`@slug` 在任何目录都等价于路径),一条 `okf server` 把多个已注册 bundle 挂在同一 hub 下。自我定位是「让知识有一个持久的家」:agent 不必每次会话重新推导上下文,新同事与新 agent 读同一份文件。100% 本地,无账号无遥测。也是生态首个 Ruby 实现:Ruby ≥ 2.4(系统自带 Ruby 即可跑)、运行时只依赖 rack / webrick / minifts,不装 Ruby 可走官方 Docker 镜像。仓库自身以 `.okf/` dogfooding。详见 [okf-gem 概念页](/references/okf-gem.md)。
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
 

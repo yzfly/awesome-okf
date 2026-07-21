@@ -24,6 +24,7 @@
 * [okf-knowledge.md](okf-knowledge.md) - /okf skill,社区星标最高(skill)
 * [okf-toolkit.md](okf-toolkit.md) - Python 全功能 CLI,PyPI(CLI)
 * [okf-cli.md](okf-cli.md) - Go,filing cabinet 架构 + MCP(CLI)
+* [okf-gem.md](okf-gem.md) - 创作 skill + CLI/库 + 图谱,全链路 harness(Ruby)
 * [okftool.md](okftool.md) - Rust 校验器 + linter,三端分发(校验)
 * [okf-rag.md](okf-rag.md) - 本地优先 OKF 检索 / RAG,Rust(检索)
 * [wiki-as-an-mcp.md](wiki-as-an-mcp.md) - 首个通用 Wiki MCP server(MCP)
