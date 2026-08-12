@@ -1,3 +1,5 @@
+
+
 ---
 type: Overview
 title: Awesome OKF
@@ -23,7 +25,7 @@ author: 云中江树
 pip install myokf-cli
 
 # 从一个 GitHub 仓库拉取 OKF bundle
-myokf from-github yzfly/awesome-okf -o ./kb
+github-to-okf yzfly/awesome-okf -o ./kb
 
 # 校验
 myokf validate ./kb
