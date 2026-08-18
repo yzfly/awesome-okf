@@ -80,6 +80,7 @@ myokf to-web ./kb -o kb.html
 | 仓库 | ★ | 语言 | 形态 |
 |---|---|---|---|
 | [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
+| [BundleDex](https://bundledex.net) | [![OKF BundleDex](https://bundledex.net/static-badge.svg)](https://bundledex.net) | — | OKF bundle 目录（500+ bundles，llms.txt + MCP 端点） |
 | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | [![★](https://img.shields.io/github/stars/JuneYaooo/lineage-skill?style=flat&label=%E2%98%85&color=444)](https://github.com/JuneYaooo/lineage-skill/stargazers) | Python | 带出处(lineage)蒸馏的 Agent Skill,输出 OKF 包 |
 | [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | [![★](https://img.shields.io/github/stars/psinetron/echoes-vault-opencode?style=flat&label=%E2%98%85&color=444)](https://github.com/psinetron/echoes-vault-opencode/stargazers) | TS | OpenCode 持久记忆插件,底层用 OKF |
 | [guhcostan/claude-mega-brain](https://github.com/guhcostan/claude-mega-brain) | [![★](https://img.shields.io/github/stars/guhcostan/claude-mega-brain?style=flat&label=%E2%98%85&color=444)](https://github.com/guhcostan/claude-mega-brain/stargazers) | Python | Claude Code 的 OKF 知识上下文注入插件 |
