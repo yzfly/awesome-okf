@@ -5,7 +5,7 @@ description: Google Cloud 发布 OKF 的官方博客文章,2026-06-12。
 resource: https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/
 tags: [okf, 官方, 博客]
 lang: zh
-timestamp: 2026-06-12T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-12T00:00:00Z }
 ---
 
 # OKF 发布博客(官方)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """OKF bundle 脚手架生成器。
 
-快速生成一个符合 OKF v0.1 的空 bundle 骨架:根 index.md(带 okf_version)、
+快速生成一个符合 OKF v0.2 的空 bundle 骨架:根 index.md(带 okf_version)、
 log.md,以及一个示例概念文档。
 
 用法:
@@ -13,7 +13,7 @@ import argparse
 from pathlib import Path
 
 ROOT_INDEX = """---
-okf_version: "0.1"
+okf_version: "0.2"
 ---
 
 # {title}
@@ -33,7 +33,8 @@ title: 示例概念
 description: 一个最小的 OKF 概念文档,演示头信息与正文结构。
 tags: [example]
 lang: {lang}
-timestamp: {date}T00:00:00Z
+status: draft
+generated: {{ by: {actor}, at: {date}T00:00:00Z }}
 ---
 
 # 概述
@@ -51,7 +52,12 @@ def main() -> int:
     ap.add_argument("target", type=Path, help="目标目录")
     ap.add_argument("--title", default="我的 OKF 知识库")
     ap.add_argument("--lang", default="zh")
-    ap.add_argument("--date", default="2026-01-01", help="ISO 日期,用于时间戳")
+    ap.add_argument("--date", default="2026-01-01", help="ISO 日期,用于 generated.at")
+    ap.add_argument(
+        "--actor",
+        default="human:you",
+        help="OKF v0.2 §7 执行者:human:<id> / process:<id> / <producer>/<version>",
+    )
     args = ap.parse_args()
 
     root: Path = args.target
@@ -62,7 +68,7 @@ def main() -> int:
     )
     (root / "log.md").write_text(LOG.format(date=args.date), encoding="utf-8")
     (root / "concepts" / "example.md").write_text(
-        EXAMPLE.format(lang=args.lang, date=args.date), encoding="utf-8"
+        EXAMPLE.format(lang=args.lang, date=args.date, actor=args.actor), encoding="utf-8"
     )
 
     print(f"✓ 已在 {root} 生成 OKF bundle 骨架")

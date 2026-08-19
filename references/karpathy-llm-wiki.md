@@ -5,7 +5,7 @@ description: Andrej Karpathy 的 llm-wiki gist,OKF 的直接思想前身,2026-04
 resource: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 tags: [okf, karpathy, llm-wiki, 思想源头]
 lang: zh
-timestamp: 2026-04-04T00:00:00Z
+generated: { by: human:yzfly, at: 2026-04-04T00:00:00Z }
 ---
 
 # Karpathy 的 LLM Wiki(思想源头)

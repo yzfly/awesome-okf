@@ -1,8 +1,13 @@
-"""把飞书导出的文档写成 OKF v0.1 bundle。"""
+"""把飞书导出的文档写成 OKF v0.2 bundle。"""
 from __future__ import annotations
 
 import re
 from pathlib import Path
+
+
+from . import __version__
+
+PRODUCER = f"feishu-to-okf/{__version__}"
 
 
 def slugify(text: str) -> str:
@@ -21,7 +26,7 @@ def frontmatter(meta: dict) -> str:
             out.append(f"{k}: [{', '.join(map(str, v))}]")
         else:
             s = str(v)
-            if (":" in s or "#" in s) and not s.startswith("http"):
+            if (":" in s or "#" in s) and not s.startswith(("http", "{", "[")):
                 s = f'"{s}"'
             out.append(f"{k}: {s}")
     out.append("---")
@@ -49,7 +54,7 @@ def write_concept(
         "description": desc,
         "resource": resource,
         "lang": lang,
-        "timestamp": timestamp,
+        "generated": f"{{ by: {PRODUCER}, at: {timestamp} }}",
     })
     path = out_dir / rel_path
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -59,7 +64,7 @@ def write_concept(
 
 def write_root(out_dir: Path, title: str, entries: list[tuple[str, str, str]],
                date: str, source: str) -> None:
-    lines = ['---\nokf_version: "0.1"\n---\n', f"# {title}\n"]
+    lines = ['---\nokf_version: "0.2"\n---\n', f"# {title}\n"]
     for name, link, desc in entries:
         lines.append(f"* [{name}]({link})" + (f" - {desc}" if desc else ""))
     (out_dir / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

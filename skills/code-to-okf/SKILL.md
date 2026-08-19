@@ -1,6 +1,6 @@
 ---
 name: code-to-okf
-description: "把源代码仓库转换为符合 OKF v0.1 的知识包(bundle), 用一套代码表示约定(类型词表, language/symbol/signature 字段, 行号锚点, 有类型链接)弥补 OKF 对代码的薄弱支持. 适用场景包括为代码库生成 agent 可读的知识文档, 把仓库的模块函数类整理为概念库, 建立代码知识图谱. 当用户提到 code to okf, 代码库转 OKF, 为代码生成知识, 或把仓库变成 agent 可检索的知识时触发."
+description: "把源代码仓库转换为符合 OKF v0.2 的知识包(bundle), 用一套代码表示约定(类型词表, language/symbol/signature 字段, 行号锚点, 有类型链接)弥补 OKF 对代码的薄弱支持. 适用场景包括为代码库生成 agent 可读的知识文档, 把仓库的模块函数类整理为概念库, 建立代码知识图谱. 当用户提到 code to okf, 代码库转 OKF, 为代码生成知识, 或把仓库变成 agent 可检索的知识时触发."
 type: Skill
 title: Code to OKF
 lang: zh

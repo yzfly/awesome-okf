@@ -5,7 +5,7 @@ description: Go 实现的 CLI,把文档站/Markdown 目录转为"扩展 OKF"bund
 resource: https://github.com/chasedputnam/okf-cli
 tags: [okf, cli, go, mcp]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # okf-cli(Go,filing cabinet 架构 + MCP)

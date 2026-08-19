@@ -5,7 +5,7 @@ description: 查询、导航与创作 OKF bundle 的 CLI 与 Python 库,OKF 早�
 resource: https://github.com/hdean-ssp/okf-tools
 tags: [okf, 工具, cli, 社区, 早期项目]
 lang: zh
-timestamp: 2026-06-15T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-15T00:00:00Z }
 ---
 
 # okf-tools(社区 CLI / 库)

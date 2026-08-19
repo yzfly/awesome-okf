@@ -1,4 +1,4 @@
-"""把 Notion 的 Markdown 导出(Export → Markdown & CSV)转换为 OKF v0.1 bundle。
+"""把 Notion 的 Markdown 导出(Export → Markdown & CSV)转换为 OKF v0.2 bundle。
 
 Notion 导出的特征:
   - 文件/目录名尾部带 32 位十六进制 ID,如 `项目计划 a1b2c3...e9.md`;
@@ -16,6 +16,10 @@ import argparse
 import re
 from pathlib import Path
 from urllib.parse import unquote
+
+from . import __version__
+
+PRODUCER = f"notion-to-okf/{__version__}"
 
 HASH = re.compile(r"\s+[0-9a-fA-F]{32}")
 MD_LINK = re.compile(r"\]\(([^)]+)\)")
@@ -63,7 +67,7 @@ def _index(d: Path, is_root: bool) -> None:
             entries.append((c.stem, c.name, ""))
     if not entries:
         return
-    head = '---\nokf_version: "0.1"\n---\n\n' if is_root else ""
+    head = '---\nokf_version: "0.2"\n---\n\n' if is_root else ""
     title = "知识库" if is_root else d.name
     lines = [head + f"# {title}\n"]
     for name, link, desc in entries:
@@ -72,7 +76,7 @@ def _index(d: Path, is_root: bool) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Notion Markdown 导出 -> OKF v0.1")
+    ap = argparse.ArgumentParser(description="Notion Markdown 导出 -> OKF v0.2")
     ap.add_argument("export_dir", type=Path, help="Notion 导出目录")
     ap.add_argument("-o", "--out", type=Path, required=True)
     ap.add_argument("--lang", default="zh")
@@ -90,7 +94,8 @@ def main(argv: list[str] | None = None) -> int:
         text = rewrite_links(text)
         fm = (
             f"---\ntype: Note\ntitle: {title}\n"
-            f"lang: {args.lang}\ntimestamp: {args.date}T00:00:00Z\n---\n\n"
+            f"lang: {args.lang}\n"
+            f"generated: {{ by: {PRODUCER}, at: {args.date}T00:00:00Z }}\n---\n\n"
         )
         # 目标路径:逐段去哈希
         rel = p.relative_to(args.export_dir)

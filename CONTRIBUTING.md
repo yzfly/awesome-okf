@@ -4,7 +4,7 @@ title: 贡献指南
 description: 如何为 awesome-okf 贡献资源, producer 插件, consumer 与提案,含 producer 插件约定。
 tags: [okf, contributing, 约定]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # 贡献指南
@@ -24,7 +24,7 @@ timestamp: 2026-06-14T00:00:00Z
 
 1. **契约**:输入(某来源)→ 输出一个**能通过 `skills/okf-creator/scripts/validate_okf.py` 的 bundle**。这是唯一硬性要求。
 2. **命名**:接入(源 → OKF)统一 `<来源>-to-okf`,输出(OKF → 目标)统一 `okf-to-<目标>`,CLI 与目录同名。
-3. **必产出**:根 `index.md`(带 `okf_version: "0.1"`)、`log.md`(`## YYYY-MM-DD` 前缀),每个概念有非空 `type`。
+3. **必产出**:根 `index.md`(带 `okf_version: "0.2"`)、`log.md`(`## YYYY-MM-DD` 前缀),每个概念有非空 `type`。
 4. **建议**:尽量零第三方依赖(纯标准库),`--lang` 默认 `zh`,`resource` 指回原始来源,中文标题生成 CJK slug。
 5. **自带 README**:本身也是一个 OKF 概念(`type: Producer`,带 frontmatter),说明安装、用法、限制。
 6. **可测**:能离线跑一个最小样例并通过校验(参考现有插件的测试方式)。

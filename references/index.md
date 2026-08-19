@@ -4,7 +4,7 @@
 
 # 官方
 
-* [okf-spec.md](okf-spec.md) - OKF v0.1 官方规范正文
+* [okf-spec.md](okf-spec.md) - OKF v0.2 官方规范正文
 * [knowledge-catalog-repo.md](knowledge-catalog-repo.md) - 官方总入口仓库
 * [launch-blog.md](launch-blog.md) - OKF 官方发布博客
 * [reference-implementations.md](reference-implementations.md) - 富化 agent 与可视化器

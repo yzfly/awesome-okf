@@ -1,16 +1,16 @@
 ---
 type: Producer
 title: feishu-to-okf
-description: 把飞书(Feishu/Lark)知识空间与文档导出为符合 OKF v0.1 的知识包,让团队飞书知识被 AI 智能体直接消费。
+description: 把飞书(Feishu/Lark)知识空间与文档导出为符合 OKF v0.2 的知识包,让团队飞书知识被 AI 智能体直接消费。
 tags: [okf, feishu, lark, producer, cli, wiki]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
 # feishu-to-okf
 
-把飞书(Feishu / Lark)的**知识空间(Wiki)与文档**,一键导出为符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包(bundle)。团队沉淀在飞书里的知识,从此可以被 AI 智能体直接检索,也能用 [`okf-to-book`](../../skills/okf-to-book/) 发布成文档站。
+把飞书(Feishu / Lark)的**知识空间(Wiki)与文档**,一键导出为符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包(bundle)。团队沉淀在飞书里的知识,从此可以被 AI 智能体直接检索,也能用 [`okf-to-book`](../../skills/okf-to-book/) 发布成文档站。
 
 零第三方依赖,纯标准库。
 
@@ -46,7 +46,7 @@ feishu-to-okf export 7012345678901234567 -o ./out --lang zh --date 2026-06-14
 - 递归遍历知识空间的全部节点;
 - 对每篇 `docx` 文档拉取块(blocks)并转成 Markdown(标题、列表、代码块、引用、待办、加粗/斜体/行内码/链接);
 - 每篇文档 → 一个 OKF 概念(`type: Document`,`resource` 指向飞书 wiki 链接,带 `lang`);
-- 生成根 `index.md`(`okf_version: "0.1"`)与 `log.md`。
+- 生成根 `index.md`(`okf_version: "0.2"`)与 `log.md`。
 
 产物用 [`validate_okf.py`](../../skills/okf-creator/scripts/validate_okf.py) 校验。
 

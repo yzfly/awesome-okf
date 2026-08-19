@@ -1,16 +1,16 @@
 ---
 type: Producer
 title: obsidian-to-okf
-description: 把 Obsidian vault 转换为符合 OKF v0.1 的知识包,wikilink 自动转为 OKF 链接。
+description: 把 Obsidian vault 转换为符合 OKF v0.2 的知识包,wikilink 自动转为 OKF 链接。
 tags: [okf, obsidian, producer, cli]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
 # obsidian-to-okf
 
-把 [Obsidian](https://obsidian.md/) vault 转换为符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包。Obsidian 本就是 Markdown + frontmatter + `[[wikilink]]`,**几乎天生就是 OKF**——本工具只补三件事。
+把 [Obsidian](https://obsidian.md/) vault 转换为符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包。Obsidian 本就是 Markdown + frontmatter + `[[wikilink]]`,**几乎天生就是 OKF**——本工具只补三件事。
 
 零第三方依赖。
 

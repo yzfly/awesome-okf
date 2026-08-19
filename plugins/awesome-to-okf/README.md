@@ -1,16 +1,16 @@
 ---
 type: Producer
 title: awesome-to-okf
-description: 把 GitHub awesome-xx 列表转换为符合 OKF v0.1 的知识包,让社区海量精选列表成为 agent 可读的知识。
+description: 把 GitHub awesome-xx 列表转换为符合 OKF v0.2 的知识包,让社区海量精选列表成为 agent 可读的知识。
 tags: [okf, awesome, github, producer, cli]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
 # awesome-to-okf
 
-把 GitHub 上海量的 **awesome-xx** 精选列表,一键转换成符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包(bundle)。这样社区里成千上万份"教程/工具/资源"列表,就能被 AI 智能体直接当知识检索,而不只是给人看的链接墙。
+把 GitHub 上海量的 **awesome-xx** 精选列表,一键转换成符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包(bundle)。这样社区里成千上万份"教程/工具/资源"列表,就能被 AI 智能体直接当知识检索,而不只是给人看的链接墙。
 
 零第三方依赖,纯标准库,开箱即跑。
 
@@ -50,7 +50,7 @@ awesome-to-okf ./README.md -o ./out --lang zh --date 2026-06-14
 
 ```
 out/
-├── index.md          # 根索引(okf_version: "0.1")
+├── index.md          # 根索引(okf_version: "0.2")
 ├── log.md
 ├── tools/
 │   ├── index.md

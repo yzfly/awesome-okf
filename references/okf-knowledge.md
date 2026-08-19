@@ -5,7 +5,7 @@ description: 可移植的 Claude Code skill,一条 /okf 命令创建·读取·�
 resource: https://github.com/sniperunder123/okf-knowledge
 tags: [okf, skill, claude-code, 社区, 头部]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # okf-knowledge(/okf skill,社区星标最高)

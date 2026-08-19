@@ -5,7 +5,7 @@ description: Rust CLI + stdio MCP server,本地优先的 OKF/Markdown 检索系�
 resource: https://github.com/killop/okf-rag
 tags: [okf, rag, 检索, rust, mcp]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # okf-rag(本地优先 OKF 检索 / RAG)

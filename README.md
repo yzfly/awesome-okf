@@ -4,7 +4,7 @@ title: Awesome OKF
 description: 中文世界第一个 OKF 落点：规范翻译、工具链、提案，以及一份活的合规范例。
 tags: [okf, awesome, 中文]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 author: 云中江树
 ---
 
@@ -15,6 +15,8 @@ author: 云中江树
 开放知识格式（OKF）的中文资料和工具。规范翻译、七个 producer 插件、七个 Claude Code skill、三份向上游的扩展提案。
 
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) 是 Google Cloud 发布的一份开放规范——把知识定义为一个目录的 Markdown 文件，带 YAML frontmatter，加一小套约定。没有运行时，没有 SDK。
+
+> 📌 **规范已升到 v0.2**：新增出处（`sources`）、信任（`generated`/`verified`）、生命周期（`status`/`stale_after`）与可验算计算（`Attested Computation`）四个家族；两处破坏性变更是 `timestamp` → `generated.at`、正文 `# Citations` → 头信息 `sources`。本仓库（规范译文、校验器、七个插件、全部文档）已完成迁移，详见 [规范中文版 §13](./docs/okf-spec-zh.md#13-与-v01-的差异)。
 
 ## 快速开始
 
@@ -80,13 +82,22 @@ myokf to-web ./kb -o kb.html
 | 仓库 | ★ | 语言 | 形态 |
 |---|---|---|---|
 | [knowledge-catalog](./references/knowledge-catalog-repo.md)(官方) | [![★](https://img.shields.io/github/stars/GoogleCloudPlatform/knowledge-catalog?style=flat&label=%E2%98%85&color=444)](https://github.com/GoogleCloudPlatform/knowledge-catalog/stargazers) | HTML | OKF 规范 + 参考实现 + 示例 bundle 总入口 |
+| [langchain-ai/openwiki](https://github.com/langchain-ai/openwiki) | [![★](https://img.shields.io/github/stars/langchain-ai/openwiki?style=flat&label=%E2%98%85&color=444)](https://github.com/langchain-ai/openwiki/stargazers) | TS | LangChain 官方:为代码库写并维护 agent 文档的 CLI,**产出 OKF v0.2 bundle**(生态 star 最高) |
+| [zosmaai/pi-llm-wiki](https://github.com/zosmaai/pi-llm-wiki) | [![★](https://img.shields.io/github/stars/zosmaai/pi-llm-wiki?style=flat&label=%E2%98%85&color=444)](https://github.com/zosmaai/pi-llm-wiki/stargazers) | TS | 自维护、兼容 Obsidian 的知识库,原始资料→互链 wiki |
+| [fellowgeek/mcp-memory](https://github.com/fellowgeek/mcp-memory) | [![★](https://img.shields.io/github/stars/fellowgeek/mcp-memory?style=flat&label=%E2%98%85&color=444)](https://github.com/fellowgeek/mcp-memory/stargazers) | Python | OKF 为底的 MCP server,给 agent 持久长期记忆 + SQL 检索 |
+| [coleam00/cole-medin-knowledge-base](https://github.com/coleam00/cole-medin-knowledge-base) | [![★](https://img.shields.io/github/stars/coleam00/cole-medin-knowledge-base?style=flat&label=%E2%98%85&color=444)](https://github.com/coleam00/cole-medin-knowledge-base/stargazers) | JS | OKF 知识库 + Karpathy 式 LLM wiki 合成产物 |
+| [UmairBaig8/okf-generator](https://github.com/UmairBaig8/okf-generator) | [![★](https://img.shields.io/github/stars/UmairBaig8/okf-generator?style=flat&label=%E2%98%85&color=444)](https://github.com/UmairBaig8/okf-generator/stargazers) | Python | OKF bundle 生成器:Claude skill + OpenCode 集成 |
+| [jyjeanne/okf-rs](https://github.com/jyjeanne/okf-rs) | [![★](https://img.shields.io/github/stars/jyjeanne/okf-rs?style=flat&label=%E2%98%85&color=444)](https://github.com/jyjeanne/okf-rs/stargazers) | Rust | Rust 工具链:生成 / 校验 / serve OKF bundle |
+| [openknowledge-sh/openknowledge](https://github.com/openknowledge-sh/openknowledge) | [![★](https://img.shields.io/github/stars/openknowledge-sh/openknowledge?style=flat&label=%E2%98%85&color=444)](https://github.com/openknowledge-sh/openknowledge/stargazers) | Go | 管理 OKF bundle 的 Go CLI |
+| [saschb2b/okf-studio](https://github.com/saschb2b/okf-studio) | [![★](https://img.shields.io/github/stars/saschb2b/okf-studio?style=flat&label=%E2%98%85&color=444)](https://github.com/saschb2b/okf-studio/stargazers) | TS | OKF bundle 的原生桌面阅读器,指向一个目录即可浏览 |
+| [aws-samples/sample-okf-llm-wiki](https://github.com/aws-samples/sample-okf-llm-wiki) | [![★](https://img.shields.io/github/stars/aws-samples/sample-okf-llm-wiki?style=flat&label=%E2%98%85&color=444)](https://github.com/aws-samples/sample-okf-llm-wiki/stargazers) | Python | AWS 官方示例:把数据转成 OKF bundle 并对外提供 |
 | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | [![★](https://img.shields.io/github/stars/JuneYaooo/lineage-skill?style=flat&label=%E2%98%85&color=444)](https://github.com/JuneYaooo/lineage-skill/stargazers) | Python | 带出处(lineage)蒸馏的 Agent Skill,输出 OKF 包 |
 | [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) | [![★](https://img.shields.io/github/stars/psinetron/echoes-vault-opencode?style=flat&label=%E2%98%85&color=444)](https://github.com/psinetron/echoes-vault-opencode/stargazers) | TS | OpenCode 持久记忆插件,底层用 OKF |
 | [guhcostan/claude-mega-brain](https://github.com/guhcostan/claude-mega-brain) | [![★](https://img.shields.io/github/stars/guhcostan/claude-mega-brain?style=flat&label=%E2%98%85&color=444)](https://github.com/guhcostan/claude-mega-brain/stargazers) | Python | Claude Code 的 OKF 知识上下文注入插件 |
 | [takeshy/obsidian-gemini-helper](https://github.com/takeshy/obsidian-gemini-helper) | [![★](https://img.shields.io/github/stars/takeshy/obsidian-gemini-helper?style=flat&label=%E2%98%85&color=444)](https://github.com/takeshy/obsidian-gemini-helper/stargazers) | TS | 支持 OKF 知识源的 Obsidian Gemini 助手 |
 | [coleam00/cole-medin-ai-coding](https://github.com/coleam00/cole-medin-ai-coding) | [![★](https://img.shields.io/github/stars/coleam00/cole-medin-ai-coding?style=flat&label=%E2%98%85&color=444)](https://github.com/coleam00/cole-medin-ai-coding/stargazers) | Python | Cole Medin AI 编程视频的 OKF 知识包 |
 | [okf-gem](./references/okf-gem.md) | [![★](https://img.shields.io/github/stars/serradura/okf-gem?style=flat&label=%E2%98%85&color=444)](https://github.com/serradura/okf-gem/stargazers) | Ruby | 创作 skill + CLI/库 + 图谱,覆盖 bundle 全生命周期 |
-| [OWOX Model Canvas](./references/owox-model-canvas.md) | [![★](https://img.shields.io/github/stars/OWOX/owox-model-canvas?style=flat&label=%E2%98%85&color=444)](https://github.com/OWOX/owox-model-canvas/stargazers) | TS | 可视化建模 / 创作端(公司维护) |
+| [OWOX Model Canvas](./references/owox-model-canvas.md) | [![★](https://img.shields.io/github/stars/OWOX/models?style=flat&label=%E2%98%85&color=444)](https://github.com/OWOX/models/stargazers) | TS | 可视化建模 / 创作端(公司维护) |
 | [0dust/OKFy](https://github.com/0dust/OKFy) | [![★](https://img.shields.io/github/stars/0dust/OKFy?style=flat&label=%E2%98%85&color=444)](https://github.com/0dust/OKFy/stargazers) | TS | 文档 → agent 可读 OKF bundle 转换器 |
 | [okf-knowledge](./references/okf-knowledge.md) | [![★](https://img.shields.io/github/stars/sniperunder123/okf-knowledge?style=flat&label=%E2%98%85&color=444)](https://github.com/sniperunder123/okf-knowledge/stargazers) | Python | Claude Code `/okf` skill |
 | [PoorvaJ-WW/okft](https://github.com/PoorvaJ-WW/okft) | [![★](https://img.shields.io/github/stars/PoorvaJ-WW/okft?style=flat&label=%E2%98%85&color=444)](https://github.com/PoorvaJ-WW/okft/stargazers) | Python | OKF 规范校验器(okft lint,适合 CI)+ MCP 服务器(okft serve),pip 安装 |
@@ -102,7 +113,7 @@ myokf to-web ./kb -o kb.html
 
 ## 这个仓库本身
 
-是一个符合 OKF v0.1 的 bundle。每个 `.md` 带 frontmatter 和非空 `type`，根目录有 `index.md` 和 `log.md`：
+是一个符合 OKF v0.2 的 bundle。每个 `.md` 带 frontmatter 和非空 `type`，根目录有 `index.md` 和 `log.md`：
 
 ```bash
 python skills/okf-creator/scripts/validate_okf.py .

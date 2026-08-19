@@ -5,7 +5,7 @@ description: OKF 随规范交付的两个参考实现——BigQuery 富化 agent
 resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
 tags: [okf, 官方, 参考实现]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # 官方参考实现

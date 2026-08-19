@@ -4,7 +4,7 @@ title: 开放知识格式如何改善数据共享(中文译文)
 description: Google Cloud 发布 OKF 的官方博客中文译文。
 tags: [okf, 译文, google-cloud]
 lang: zh
-timestamp: 2026-06-12T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-12T00:00:00Z }
 author: 云中江树(译)
 ---
 

@@ -2,10 +2,10 @@
 type: Reference
 title: OWOX Model Canvas(可视化建模 / 创作端)
 description: 数据平台公司 OWOX 出品、已公网部署的"类 Miro"可视化数据建模编辑器,读写 / 导出 OKF Markdown+YAML bundle 并可往返,自我定位为 OKF 的可视化创作前端。
-resource: https://github.com/OWOX/owox-model-canvas
+resource: https://github.com/OWOX/models
 tags: [okf, 可视化, 建模, 创作, 公司维护, 头部]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # OWOX Model Canvas(可视化建模 / 创作端)
@@ -19,4 +19,4 @@ timestamp: 2026-06-28T00:00:00Z
 
 它自我定位为"OKF 格式的可视化创作 / 导出前端"。与本仓库走静态产物路线的 [okf-to-web](/skills/okf-to-web/SKILL.md)、官方的 viz.html(见 [reference-implementations](/references/reference-implementations.md))相比,它是面向人工建模的交互式创作端。
 
-源码:<https://github.com/OWOX/owox-model-canvas>
+源码:<https://github.com/OWOX/models>

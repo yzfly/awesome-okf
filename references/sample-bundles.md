@@ -5,7 +5,7 @@ description: OKF 官方提供的三个开箱即浏览示例——GA4、Stack Ove
 resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf/bundles
 tags: [okf, 官方, 示例]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # 官方示例 bundle

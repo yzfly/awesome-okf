@@ -1,6 +1,6 @@
 ---
 name: github-to-okf
-description: "把一个 GitHub 仓库(远程或本地)转换并富化为符合 OKF v0.1 的知识包(bundle), 让仓库的文档与代码成为 AI 智能体可检索的知识. 适用场景包括为开源项目生成知识库, 把代码仓库变成 agent 可问答的上下文, 建立仓库的架构与 API 知识图谱. 当用户提到 github to okf, 把仓库转 OKF, 为某个 repo 生成知识库, 或导入某个 GitHub 项目为知识时触发."
+description: "把一个 GitHub 仓库(远程或本地)转换并富化为符合 OKF v0.2 的知识包(bundle), 让仓库的文档与代码成为 AI 智能体可检索的知识. 适用场景包括为开源项目生成知识库, 把代码仓库变成 agent 可问答的上下文, 建立仓库的架构与 API 知识图谱. 当用户提到 github to okf, 把仓库转 OKF, 为某个 repo 生成知识库, 或导入某个 GitHub 项目为知识时触发."
 type: Skill
 title: GitHub to OKF
 lang: zh

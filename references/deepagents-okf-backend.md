@@ -5,7 +5,7 @@ description: 为 LangChain Deep Agents 提供 OKF 感知的虚拟文件系统后
 resource: https://github.com/emanueleielo/deepagents-okf-backend
 tags: [okf, langchain, 集成, pypi]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # deepagents-okf-backend(LangChain Deep Agents 的 OKF 后端)

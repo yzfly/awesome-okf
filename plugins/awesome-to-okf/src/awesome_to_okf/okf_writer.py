@@ -1,10 +1,13 @@
-"""把解析出的 awesome 列表写成符合 OKF v0.1 的 bundle。"""
+"""把解析出的 awesome 列表写成符合 OKF v0.2 的 bundle。"""
 from __future__ import annotations
 
 import re
 from pathlib import Path
 
+from . import __version__
 from .parser import Item, ParsedList
+
+PRODUCER = f"awesome-to-okf/{__version__}"
 
 
 def slugify(text: str) -> str:
@@ -27,10 +30,19 @@ def _frontmatter(meta: dict) -> str:
             lines.append(f"{k}: [{inner}]")
         else:
             val = str(v)
-            if any(c in val for c in ":#") and not val.startswith("http"):
+            flow = val.startswith(("{", "["))
+            if any(c in val for c in ":#") and not val.startswith("http") and not flow:
                 val = f'"{val}"'
             lines.append(f"{k}: {val}")
     lines.append("---")
+    return "\n".join(lines)
+
+
+def _sources_block(item: Item) -> str:
+    """把出处写成块序列(§5.1);id 供正文脚注作 join key。"""
+    lines = ["sources:", "  - id: src", f"    resource: {item.url}"]
+    if item.title:
+        lines.append(f"    title: {item.title}")
     return "\n".join(lines)
 
 
@@ -44,13 +56,15 @@ def _concept_doc(item: Item, lang: str, timestamp: str) -> str:
             "resource": item.url,
             "tags": tags,
             "lang": lang,
-            "timestamp": timestamp,
+            "generated": f"{{ by: {PRODUCER}, at: {timestamp} }}",
         }
     )
+    # OKF v0.2 §5.1:出处进头信息,取代 v0.1 正文的 `# Citations` 列表
+    fm = fm[: -len("---")] + _sources_block(item) + "\n---"
     body = [f"\n# {item.title}\n"]
     if item.description:
         body.append(item.description + "\n")
-    body.append(f"\n# Citations\n\n[1] [{item.title}]({item.url})\n")
+    body.append(f"\n来源:[^src]\n\n[^src]: [{item.title}]({item.url})\n")
     return fm + "\n" + "".join(body)
 
 
@@ -116,7 +130,7 @@ def write_bundle(
         stats["sections"] += 1
 
     (out_dir / "index.md").write_text(
-        _index(parsed.title, root_entries, okf_version="0.1"), encoding="utf-8"
+        _index(parsed.title, root_entries, okf_version="0.2"), encoding="utf-8"
     )
     src = f"（来源:{source_url}）" if source_url else ""
     (out_dir / "log.md").write_text(

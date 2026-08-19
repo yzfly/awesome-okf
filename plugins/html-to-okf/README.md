@@ -4,7 +4,7 @@ title: html-to-okf
 description: 把 HTML 文件转换为 OKF 概念,产出机读 .md + 人友好 .html 双表示,实现 HTML 一等公民提案。
 tags: [okf, html, producer, cli]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 

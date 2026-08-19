@@ -4,7 +4,7 @@ title: myokf-cli
 description: OKF 统一命令行入口,把所有 producer, consumer 与工具收进一个 myokf 命令。
 tags: [okf, cli, 统一入口]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
@@ -24,7 +24,7 @@ uv pip install -e .
 
 ```bash
 myokf list                      # 列出全部命令
-myokf validate <bundle>         # 校验 OKF v0.1 符合性
+myokf validate <bundle>         # 校验 OKF v0.2 符合性
 myokf scaffold <dir>            # 生成空 bundle 骨架
 
 # Producers(来源 → OKF)

@@ -5,7 +5,7 @@ description: 基于 OKF 的 Agent 持久记忆系统(已上 PyPI,可作 Hermes �
 resource: https://github.com/EliaszDev/hermes-okf
 tags: [okf, 记忆, agent, pypi, 社区]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # hermes-okf(基于 OKF 的 Agent 持久记忆)

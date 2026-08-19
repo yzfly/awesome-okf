@@ -1,4 +1,4 @@
-"""把 Obsidian vault 转换为 OKF v0.1 bundle。
+"""把 Obsidian vault 转换为 OKF v0.2 bundle。
 
 Obsidian 本就是 markdown + frontmatter + [[wikilink]],几乎天生符合 OKF。
 本工具只补三件事:
@@ -14,6 +14,10 @@ from __future__ import annotations
 import argparse
 import re
 from pathlib import Path
+
+from . import __version__
+
+PRODUCER = f"obsidian-to-okf/{__version__}"
 
 WIKILINK = re.compile(r"\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]")
 TYPE_LINE = re.compile(r"^type\s*:", re.MULTILINE)
@@ -69,7 +73,7 @@ def ensure_frontmatter(text: str, *, title: str, lang: str, default_type: str,
     # 无 frontmatter:新建
     new = (
         f"---\ntype: {default_type}\ntitle: {title}\n"
-        f"lang: {lang}\ntimestamp: {timestamp}\n---\n\n"
+        f"lang: {lang}\ngenerated: {{ by: {PRODUCER}, at: {timestamp} }}\n---\n\n"
     )
     return new + text
 
@@ -91,7 +95,7 @@ def _dir_index(out: Path, d: Path, is_root: bool) -> None:
             entries.append((child.stem, child.name, ""))
     if not entries:
         return
-    head = '---\nokf_version: "0.1"\n---\n\n' if is_root else ""
+    head = '---\nokf_version: "0.2"\n---\n\n' if is_root else ""
     title = "知识库" if is_root else d.name
     lines = [head + f"# {title}\n"]
     for name, link, desc in entries:
@@ -100,7 +104,7 @@ def _dir_index(out: Path, d: Path, is_root: bool) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Obsidian vault -> OKF v0.1")
+    ap = argparse.ArgumentParser(description="Obsidian vault -> OKF v0.2")
     ap.add_argument("vault", type=Path, help="Obsidian vault 目录")
     ap.add_argument("-o", "--out", type=Path, required=True)
     ap.add_argument("--lang", default="zh")

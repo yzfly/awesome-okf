@@ -5,7 +5,7 @@ description: English issue text and SPEC.md PR diff for first-class .html concep
 tags: [okf, html, 提案, upstream]
 lang: en
 canonical: /docs/html-first-class-proposal-zh.md
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 author: 云中江树
 ---
 

@@ -5,7 +5,7 @@ description: 已上 PyPI 的 Python 全功能 OKF CLI,覆盖创建、校验、�
 resource: https://github.com/akdira/okf-toolkit
 tags: [okf, cli, python, pypi]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # okf-toolkit(Python 全功能 CLI,PyPI)

@@ -5,7 +5,7 @@ description: OKF 发布引擎,把 OKF bundle 渲染成静态网站,定位为 bun
 resource: https://github.com/oak-invest/kiso
 tags: [okf, 发布, 静态站点, consumer]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # kiso(OKF 发布引擎)

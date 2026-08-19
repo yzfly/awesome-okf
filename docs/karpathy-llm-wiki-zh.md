@@ -5,7 +5,7 @@ description: Andrej Karpathy 2026-04-04 发布的 llm-wiki gist 的中文梳理�
 tags: [okf, karpathy, llm-wiki, 思想源头]
 lang: zh
 canonical: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
-timestamp: 2026-04-04T00:00:00Z
+generated: { by: human:yzfly, at: 2026-04-04T00:00:00Z }
 author: 云中江树(整理)
 ---
 
@@ -43,7 +43,7 @@ author: 云中江树(整理)
 - **Query(查询)**:对 wiki 提问 → LLM 找相关页、读、带引用综合作答。**好答案可以回填成新页面**,让探索也复利。
 - **Lint(体检)**:定期让 LLM 健康检查——找矛盾、过时论断、孤儿页、缺页的重要概念、缺失的交叉引用、可补的数据缺口。
 
-## 两个特殊文件(OKF §6/§7 的来源)
+## 两个特殊文件(OKF §8/§9 的来源)
 
 - **`index.md`**:面向内容的目录,每页一条链接 + 一句话摘要 + 可选元数据,按类别组织,每次 ingest 更新。先读索引再钻页面——在中等规模(~100 源、数百页)出奇地好用,免掉了 embedding RAG 基建。
 - **`log.md`**:面向时间的只读追加记录。小技巧:每条以一致前缀开头(如 `## [2026-04-02] ingest | 文章标题`),日志就能被 unix 工具解析:`grep "^## \[" log.md | tail -5`。

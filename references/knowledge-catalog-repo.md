@@ -5,7 +5,7 @@ description: OKF 规范、参考实现与示例 bundle 的官方总入口。
 resource: https://github.com/GoogleCloudPlatform/knowledge-catalog
 tags: [okf, 官方, 仓库]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # knowledge-catalog 仓库(官方)

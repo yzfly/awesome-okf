@@ -1,10 +1,10 @@
 ---
-okf_version: "0.1"
+okf_version: "0.2"
 ---
 
 # Awesome OKF
 
-> 本仓库自身就是一个符合 OKF v0.1 的知识包。本文件是 bundle 的根索引(渐进式展开);项目主页见 [README](README.md)。
+> 本仓库自身就是一个符合 OKF v0.2 的知识包。本文件是 bundle 的根索引(渐进式展开);项目主页见 [README](README.md)。
 
 # 文档与提案
 
@@ -30,7 +30,7 @@ okf_version: "0.1"
 
 # 外部与官方资源(references/)
 
-* [官方规范 SPEC.md](references/okf-spec.md) - OKF v0.1 规范正文
+* [官方规范 SPEC.md](references/okf-spec.md) - OKF v0.2 规范正文
 * [knowledge-catalog 仓库](references/knowledge-catalog-repo.md) - 官方总入口
 * [发布博客](references/launch-blog.md) - OKF 官方发布文
 * [官方参考实现](references/reference-implementations.md) - 富化 agent 与可视化器

@@ -1,16 +1,16 @@
 ---
 type: Producer
 title: notion-to-okf
-description: 把 Notion 的 Markdown 导出转换为符合 OKF v0.1 的知识包,去哈希并补全 frontmatter。
+description: 把 Notion 的 Markdown 导出转换为符合 OKF v0.2 的知识包,去哈希并补全 frontmatter。
 tags: [okf, notion, producer, cli]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
 # notion-to-okf
 
-把 [Notion](https://www.notion.so/) 的 **Markdown 导出**(Export → Markdown & CSV)转换为符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包。
+把 [Notion](https://www.notion.so/) 的 **Markdown 导出**(Export → Markdown & CSV)转换为符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包。
 
 零第三方依赖,离线运行——无需 Notion API,直接处理你导出的文件夹。
 

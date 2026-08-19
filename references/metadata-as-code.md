@@ -5,7 +5,7 @@ description: 官方的元数据即代码工具,用 YAML+Markdown 管理 Dataplex
 resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/agents/mdcode
 tags: [okf, 官方, metadata-as-code, mcp]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # Metadata as Code(kcmd / mdcode)

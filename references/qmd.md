@@ -5,7 +5,7 @@ description: 本地 Markdown 搜索引擎,BM25+向量+LLM 重排,可作 OKF 的�
 resource: https://github.com/tobi/qmd
 tags: [okf, 工具, 搜索, consumer]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 ---
 
 # qmd(Markdown 本地搜索)

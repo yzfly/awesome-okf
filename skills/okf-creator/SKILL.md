@@ -1,6 +1,6 @@
 ---
 name: okf-creator
-description: "把任意输入(代码库, 文档, 数据表结构, 笔记)梳理成符合开放知识格式(OKF v0.1)的知识包(bundle), 强调正文质量而不只是结构合规. 适用场景包括从零创建 OKF 知识库, 为代码库生成知识文档, 把零散资料整理为可被 AI 智能体消费的 Markdown 概念库, 校验和修复 bundle 的符合性. 当用户提到 OKF, 开放知识格式, 知识包, knowledge bundle, 或需要把资料整理成 agent 可读的结构化知识时触发."
+description: "把任意输入(代码库, 文档, 数据表结构, 笔记)梳理成符合开放知识格式(OKF v0.2)的知识包(bundle), 强调正文质量而不只是结构合规. 适用场景包括从零创建 OKF 知识库, 为代码库生成知识文档, 把零散资料整理为可被 AI 智能体消费的 Markdown 概念库, 校验和修复 bundle 的符合性. 当用户提到 OKF, 开放知识格式, 知识包, knowledge bundle, 或需要把资料整理成 agent 可读的结构化知识时触发."
 type: Skill
 title: OKF Creator
 lang: zh
@@ -10,7 +10,7 @@ license: MIT
 
 # OKF Creator
 
-把任意输入整理成**符合 OKF v0.1 且正文质量过关**的知识包。OKF 的硬要求极低(任何带 `type` 的 Markdown 就合规),所以本 Skill 的真正价值不在"产出合规文件",而在"产出**读了就懂、agent 检索得动**的知识"。
+把任意输入整理成**符合 OKF v0.2 且正文质量过关**的知识包。OKF 的硬要求极低(任何带 `type` 的 Markdown 就合规),所以本 Skill 的真正价值不在"产出合规文件",而在"产出**读了就懂、agent 检索得动**的知识"。
 
 ## 何时使用
 
@@ -70,7 +70,7 @@ lang: zh                   # 本仓库 i18n 约定(可选扩展)
 ## 配套脚本
 
 - `scripts/scaffold_okf.py` — 生成空 bundle 骨架。
-- `scripts/validate_okf.py` — OKF v0.1 符合性校验(可独立使用)。
+- `scripts/validate_okf.py` — OKF v0.2 符合性校验(可独立使用)。
 
 ## 相关 Skill
 

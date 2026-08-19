@@ -5,7 +5,7 @@ description: 首个遵循 OKF 的通用 Wiki MCP server,把一个 OKF bundle 当
 resource: https://github.com/taikunudel/wiki-as-an-mcp
 tags: [okf, mcp, wiki, 社区, 头部]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # wiki-as-an-mcp(首个通用 Wiki MCP server)

@@ -4,7 +4,7 @@ title: OKF 全网资料汇总
 description: 持续收集整理的开放知识格式(OKF)及其思想源头 LLM Wiki 的官方, 新闻, 分析与教程资料。
 tags: [okf, 资料, reference, 汇总]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 author: 云中江树(整理)
 ---
 
@@ -122,7 +122,7 @@ author: 云中江树(整理)
 - [killop/okf-rag](https://github.com/killop/okf-rag) —— **Rust** CLI + stdio MCP server,本地优先的 OKF/Markdown 检索系统:本地 ONNX MiniLM 嵌入(无远程 API)、zvec 向量做混合检索,文件监听变更自动重建索引,附 benchmark(Recall@1 95.35%、5.3ms)并随包发预编译二进制免编译。把"OKF→RAG"这一环补上,在生态里 star 较突出。
 - [agentic-wiki/wiki](https://github.com/agentic-wiki/wiki) —— **Go** 单文件静态二进制 CLI,管理 OKF 包:按 type/tag/path 查询、链接健康检查、列未完成任务、一致性校验(`status`/`list`/`check`/`tasks`),JSON 输出 + 脚本退出码,提供预编译二进制。Go 实现区别于已收录的 Python/JS 校验工具(同组织另有 [agentic-wiki/template](https://github.com/agentic-wiki/template) 模板仓库)。
 - [sljm12/llm_wiki_okf_web](https://github.com/sljm12/llm_wiki_okf_web) —— **Next.js + FastAPI** 的 OKF 包 Web 前端:分类浏览、BM25 全文搜索、交互式关系图、时间线视图,后端用 repository 模式抽象数据访问、可在文件系统 / PostgreSQL 后端间切换。OKF Web 浏览器形态,功能完整但仍早期。
-- [OWOX/owox-model-canvas](https://github.com/OWOX/owox-model-canvas)([在线版 model.owox.com](https://model.owox.com)) —— 数据平台公司 OWOX 出品的「类 Miro」可视化数据建模编辑器(**TS/React/Vite/Fastify**):在画布上拖拽数据集市(表 / 视图 / SQL)节点与可 join 的关系边、套行业模板、用 AI(Gemini)从 schema 元数据生成「这个模型能回答哪些业务问题」,可一键推送到 OWOX Data Marts,并**读写 / 导出 OKF 规范的 Markdown+YAML bundle**(可往返 round-trip),自我定位为「OKF 格式的可视化创作 / 导出前端」。生态里少见的成型、已公网部署、有公司维护的**可视化建模 / 创作端**。
+- [OWOX/owox-model-canvas](https://github.com/OWOX/models)([在线版 model.owox.com](https://model.owox.com)) —— 数据平台公司 OWOX 出品的「类 Miro」可视化数据建模编辑器(**TS/React/Vite/Fastify**):在画布上拖拽数据集市(表 / 视图 / SQL)节点与可 join 的关系边、套行业模板、用 AI(Gemini)从 schema 元数据生成「这个模型能回答哪些业务问题」,可一键推送到 OWOX Data Marts,并**读写 / 导出 OKF 规范的 Markdown+YAML bundle**(可往返 round-trip),自我定位为「OKF 格式的可视化创作 / 导出前端」。生态里少见的成型、已公网部署、有公司维护的**可视化建模 / 创作端**。
 - [pumblus/okf-harness](https://github.com/pumblus/okf-harness) —— 面向 agent、本地优先的终端 harness(v0.5.1):维护一个 OKF 兼容的 LLM Wiki,把知识当作可 git 版本化的纯 Markdown,在终端里读写 / 检索 bundle。定位偏"agent 的本地知识工作台",区别于纯 CLI / 校验器。
 - [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) —— 把视频 / 书籍 / PDF / 笔记蒸馏成"带出处(lineage)"的 Agent Skill,新增 OKF 兼容知识包输出:每条结论可回溯到原始信源。多源信息 → 有溯源的 OKF bundle,与 pdf2okf / bili2okf 等单一信源转换器互补。
 - [psinetron/echoes-vault-opencode](https://github.com/psinetron/echoes-vault-opencode) —— OpenCode 的持久记忆插件(EchoesVault),底层用 Google OKF 做纯 Markdown 知识库:把会话记忆 / 上下文沉淀为可版本化的 OKF bundle,跨会话存活。把 OKF 接到 OpenCode 生态的记忆层,与 hermes-okf 同属"agent 持久记忆"方向。
@@ -139,7 +139,7 @@ author: 云中江树(整理)
 - [AI-First-Community/Bodhi](https://github.com/AI-First-Community/Bodhi) —— **JS**(v0.4.0,离线优先,无构建依赖):覆盖 123 个现代 AI 概念(token / attention / LoRA / DPO / 推理模型 / agent 等)及其跨域关系的交互式知识图谱,底层把内容存为 `knowledge/` 目录下符合 OKF v0.1 的 bundle 作为唯一真相源,使知识「可移植、可 git 发布、agent 可读」;Cytoscape.js + fcose 渲染力导向图,依赖全部本地内置,打开 `index.html` 即用([在线版](https://ai-first-community.github.io/Bodhi/))。领域知识图谱型 OKF 案例样例。
 - [win4r/okf-skill](https://github.com/win4r/okf-skill) —— **Python**(零依赖,Apache-2.0):确定性的 OKF v0.1 一致性校验器,区分硬错误与 lint 警告,自带带等价性测试的 YAML mini-parser;单一 `okf.py` CLI 覆盖 scaffold / index / context / 离线 graph 可视化 / wiki→OKF 迁移,137 测试 + 3.8/3.12 CI。迄今功能最完整、测试最扎实的校验器之一(作者与已收录 okf-handoff 同一人 win4r)。
 - [dddpaul/okf-mcp-server](https://github.com/dddpaul/okf-mcp-server) —— **Python**(v0.2.0):只读 MCP server,用 OKF frontmatter(`export: true` + 非空 `type`)严格 opt-in,把仓库内 design / decisions / docs 等文件「自决」暴露为 MCP resources(URI 规则 `knowledge://{owner}/{type-slug}/{id}` 清晰),零 per-source 配置、按 git 根目录自动命名空间,只读、无写入 / 无热重载。区别于已收录 rodcar/okf-atlas-mcp(偏 bundle 检索)的「文件自决、零配置」轻量导出形态。
-- [OWOX/okf-export](https://github.com/OWOX/okf-export) —— **Python**:数据平台公司 OWOX 官方出品的导出器,把 OWOX Data Marts 的元数据导出为 OKF bundle——每个数据集市一篇 OKF 概念文档(标题 / 描述 / schema / 存储信息),只描述结构不导出行数据,附交互式知识图谱,可选 GitHub 集成自动发布,既是独立 CLI 也可作 OWOX Data Marts 客户端的插件。与同公司已收录的 [owox-model-canvas](https://github.com/OWOX/owox-model-canvas)(可视化建模 / 创作端)互补,补「Data Marts 元数据 → OKF」一环。
+- [OWOX/okf-export](https://github.com/OWOX/okf-export) —— **Python**:数据平台公司 OWOX 官方出品的导出器,把 OWOX Data Marts 的元数据导出为 OKF bundle——每个数据集市一篇 OKF 概念文档(标题 / 描述 / schema / 存储信息),只描述结构不导出行数据,附交互式知识图谱,可选 GitHub 集成自动发布,既是独立 CLI 也可作 OWOX Data Marts 客户端的插件。与同公司已收录的 [owox-model-canvas](https://github.com/OWOX/models)(可视化建模 / 创作端)互补,补「Data Marts 元数据 → OKF」一环。
 - [gsemet/okf-schema](https://github.com/gsemet/okf-schema) —— **Python**(已上 PyPI):schema 驱动的 OKF 校验 CLI 与库,从 `_schema/` 目录自动发现 schema 做 frontmatter 校验,带 bundle 完整性检查与 lint(`init`/`validate`/`lint`/`list`/`show`/`index`/`stats`),96% 测试覆盖、ruff + 类型检查 + CI。区别于已收录的硬编码规则校验器(okf-lint / okf-conformance / okflint),主打「按可声明 schema 校验」。
 - [Scorpion1221/ai-wiki](https://github.com/Scorpion1221/ai-wiki) —— **Python**:服务并维护 OKF markdown 知识 bundle 的服务 + CLI,做确定性维护(校验、信源漂移检测、index 生成、链接 / 健康 lint)并提供 read API 与无头(headless)agent 自动策展。把「维护 + 只读 API + 自动策展」打包成一个服务。
 - [PoojaPatil2509/document-intelligence](https://github.com/PoojaPatil2509/document-intelligence) —— **Python**:基于 OKF 的开源 RAG + 知识图谱记忆层,摄取 PDF/DOCX/HTML 抽成 OKF bundle 当 canonical 知识,再派生 Neo4j 图与 pgvector 索引做语义检索与问答。区别于已收录 killop/okf-rag(Rust、本地 ONNX 嵌入)的是「OKF + Neo4j 图 + pgvector」多用户栈。

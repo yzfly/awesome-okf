@@ -14,6 +14,10 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
+from . import __version__
+
+PRODUCER = f"html-to-okf/{__version__}"
+
 BLOCK = {"h1", "h2", "h3", "h4", "h5", "h6", "p", "li", "pre", "blockquote"}
 HEADING = {"h1": "#", "h2": "##", "h3": "###", "h4": "####", "h5": "#####", "h6": "######"}
 
@@ -142,7 +146,7 @@ def convert_file(html_path: Path, out: Path, lang: str, timestamp: str) -> tuple
     if "<!--okf" not in raw:
         comment = okf_comment({
             "type": "Document", "title": title, "lang": lang,
-            "canonical": f"/{slug}.md", "timestamp": timestamp,
+            "canonical": f"/{slug}.md",
         })
     html_out.write_text(comment + raw, encoding="utf-8")
 
@@ -150,7 +154,7 @@ def convert_file(html_path: Path, out: Path, lang: str, timestamp: str) -> tuple
     md = (
         f"---\ntype: Document\ntitle: {title}\n"
         f"description: {desc}\nresource: assets/{slug}.html\n"
-        f"lang: {lang}\ntimestamp: {timestamp}\n---\n\n"
+        f"lang: {lang}\ngenerated: {{ by: {PRODUCER}, at: {timestamp} }}\n---\n\n"
         f"# {title}\n\n{md_body}\n"
         f"# Source\n\n人友好版本:[{slug}.html](assets/{slug}.html)\n"
     )
@@ -179,7 +183,7 @@ def main(argv: list[str] | None = None) -> int:
         entries.append((title, f"{slug}.md"))
         print(f"  ✓ {f.name} -> {slug}.md (+ assets/{slug}.html)")
 
-    lines = ['---\nokf_version: "0.1"\n---\n', "# HTML 知识库\n"]
+    lines = ['---\nokf_version: "0.2"\n---\n', "# HTML 知识库\n"]
     for title, link in entries:
         lines.append(f"* [{title}]({link})")
     (args.out / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

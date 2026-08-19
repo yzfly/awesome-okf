@@ -1,6 +1,6 @@
 ---
 name: awesome-to-okf
-description: "把 GitHub 上的 awesome-xx 精选列表转换并富化为符合 OKF v0.1 的知识包(bundle), 让社区海量教程和资源列表成为 AI 智能体可检索的知识. 适用场景包括把某个 awesome 列表导入为 OKF, 为列表里的条目补充结构化正文, 校验产物符合性. 当用户提到 awesome 列表, GitHub 精选列表转 OKF, 或想把某个 awesome-xx 变成知识库时触发."
+description: "把 GitHub 上的 awesome-xx 精选列表转换并富化为符合 OKF v0.2 的知识包(bundle), 让社区海量教程和资源列表成为 AI 智能体可检索的知识. 适用场景包括把某个 awesome 列表导入为 OKF, 为列表里的条目补充结构化正文, 校验产物符合性. 当用户提到 awesome 列表, GitHub 精选列表转 OKF, 或想把某个 awesome-xx 变成知识库时触发."
 type: Skill
 title: Awesome to OKF
 lang: zh
@@ -10,7 +10,7 @@ license: MIT
 
 # Awesome to OKF
 
-把 GitHub 上的 **awesome-xx** 列表转成符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包,并富化成 agent 真正用得上的知识。
+把 GitHub 上的 **awesome-xx** 列表转成符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包,并富化成 agent 真正用得上的知识。
 
 ## 何时使用
 

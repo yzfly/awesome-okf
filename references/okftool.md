@@ -5,7 +5,7 @@ description: Rust 实现的可嵌入 OKF 校验器 + linter,同一内核分发�
 resource: https://github.com/ryansann/okftool
 tags: [okf, 校验, lint, rust, 头部]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # okftool(Rust 校验器 + linter,三端分发)

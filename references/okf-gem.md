@@ -5,7 +5,7 @@ description: 覆盖 bundle 全生命周期的 harness:agent skill 负责创作�
 resource: https://github.com/serradura/okf-gem
 tags: [okf, harness, skill, cli, 图谱, ruby, 社区]
 lang: zh
-timestamp: 2026-07-21T00:00:00Z
+generated: { by: human:yzfly, at: 2026-07-21T00:00:00Z }
 ---
 
 # okf-gem(OKF 全链路 harness:创作 skill + CLI/库 + 图谱)

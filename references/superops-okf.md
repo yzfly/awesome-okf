@@ -5,7 +5,7 @@ description: Go 实现的 OKF 工具,定位为 AI Agent 的项目级知识库。
 resource: https://github.com/superops-team/okf
 tags: [okf, go, 实现, 社区]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # superops-team/okf(Go,项目级知识库)

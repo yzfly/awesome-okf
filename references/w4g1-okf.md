@@ -5,7 +5,7 @@ description: 纯 Rust、零依赖的 OKF 实现,生态里第一个系统级语�
 resource: https://github.com/W4G1/okf
 tags: [okf, rust, 实现, 社区, 头部]
 lang: zh
-timestamp: 2026-06-28T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-28T00:00:00Z }
 ---
 
 # W4G1/okf(纯 Rust 零依赖实现)

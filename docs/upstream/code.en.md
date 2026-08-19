@@ -5,7 +5,7 @@ description: English issue text and SPEC.md PR diff for representing source code
 tags: [okf, code, 提案, upstream]
 lang: en
 canonical: /docs/code-support-research-zh.md
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 author: 云中江树
 ---
 

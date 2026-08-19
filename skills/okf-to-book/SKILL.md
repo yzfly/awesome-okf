@@ -1,6 +1,6 @@
 ---
 name: okf-to-book
-description: "把符合 OKF v0.1 的知识包或项目发布为可视化的文档站(VitePress, Vue 系, 亮色主题), 带侧边栏导航与概念互链. 适用场景包括把一个 OKF bundle 变成可浏览的网站或电子书, 为知识库生成文档门户, 把任意 OKF 项目发布为静态站点. 当用户提到把 OKF 发布成文档站, OKF 转网站或电子书, 可视化知识库, 或为 bundle 生成 docs 站时触发."
+description: "把符合 OKF v0.2 的知识包或项目发布为可视化的文档站(VitePress, Vue 系, 亮色主题), 带侧边栏导航与概念互链. 适用场景包括把一个 OKF bundle 变成可浏览的网站或电子书, 为知识库生成文档门户, 把任意 OKF 项目发布为静态站点. 当用户提到把 OKF 发布成文档站, OKF 转网站或电子书, 可视化知识库, 或为 bundle 生成 docs 站时触发."
 type: Skill
 title: OKF to Book
 lang: zh
@@ -10,7 +10,7 @@ license: MIT
 
 # OKF to Book
 
-把任意符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包,发布为可视化文档站(像一本可浏览的书)。默认用 **VitePress**(Vue 系)+ **亮色主题**(不启用暗色)。
+把任意符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包,发布为可视化文档站(像一本可浏览的书)。默认用 **VitePress**(Vue 系)+ **亮色主题**(不启用暗色)。
 
 ## 何时使用
 

@@ -1,6 +1,6 @@
 ---
 name: okf-to-web
-description: "把符合 OKF v0.1 的知识包打包成单个自包含且经过压缩(minify)的 HTML 文件, 内嵌导航, Markdown 阅读器与概念关系图谱, 数据不出页面, 无需后端. 适用场景包括把 OKF bundle 变成一个可分享的单文件网页, 离线浏览知识库, 生成对标官方 viz.html 的可视化. 当用户提到 okf to web, OKF 转单文件网页, 可视化 OKF, minify 知识库, 或要一个自包含 HTML 时触发."
+description: "把符合 OKF v0.2 的知识包打包成单个自包含且经过压缩(minify)的 HTML 文件, 内嵌导航, Markdown 阅读器与概念关系图谱, 数据不出页面, 无需后端. 适用场景包括把 OKF bundle 变成一个可分享的单文件网页, 离线浏览知识库, 生成对标官方 viz.html 的可视化. 当用户提到 okf to web, OKF 转单文件网页, 可视化 OKF, minify 知识库, 或要一个自包含 HTML 时触发."
 type: Skill
 title: OKF to Web
 lang: zh
@@ -10,7 +10,7 @@ license: MIT
 
 # OKF to Web
 
-把任意符合 [OKF v0.1](../../docs/okf-spec-zh.md) 的知识包,打包成**单个自包含、压缩过的 `.html`**——左侧分组导航 + 中间 Markdown 阅读器 + 右侧概念关系图谱。数据全部内嵌,**不出页面**,无后端、无安装,双击即开。对标官方 `viz.html`。
+把任意符合 [OKF v0.2](../../docs/okf-spec-zh.md) 的知识包,打包成**单个自包含、压缩过的 `.html`**——左侧分组导航 + 中间 Markdown 阅读器 + 右侧概念关系图谱。数据全部内嵌,**不出页面**,无后端、无安装,双击即开。对标官方 `viz.html`。
 
 与 [`okf-to-book`](../okf-to-book/) 的区别:那个生成多页 VitePress 站点(需 npm 构建);本 Skill 产出**一个文件**,适合分享、归档、离线。
 

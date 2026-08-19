@@ -5,6 +5,10 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from . import __version__
+
+PRODUCER = f"github-to-okf/{__version__}"
+
 LANG_EXT = {
     ".py": "python", ".go": "go", ".js": "javascript", ".mjs": "javascript",
     ".ts": "typescript", ".tsx": "typescript", ".jsx": "javascript",
@@ -79,7 +83,7 @@ def _fm(meta: dict) -> str:
             out.append(f"{k}: [{', '.join(map(str, v))}]")
         else:
             s = str(v)
-            if (":" in s or "#" in s) and not s.startswith("http"):
+            if (":" in s or "#" in s) and not s.startswith(("http", "{", "[")):
                 s = f'"{s}"'
             out.append(f"{k}: {s}")
     out.append("---")
@@ -95,7 +99,8 @@ def write_bundle(out: Path, repo_name: str, overview: str, concepts: list[FileCo
     (out / "repository.md").write_text(
         _fm({"type": "Repository", "title": repo_name,
              "description": f"{repo_name} 的 OKF 知识包",
-             "resource": source, "lang": lang, "timestamp": timestamp})
+             "resource": source, "lang": lang,
+             "generated": f"{{ by: {PRODUCER}, at: {timestamp} }}"})
         + f"\n\n# {repo_name}\n\n{overview}\n",
         encoding="utf-8",
     )
@@ -120,13 +125,14 @@ def write_bundle(out: Path, repo_name: str, overview: str, concepts: list[FileCo
         meta = {"type": dtype, "title": c.relpath,
                 "description": f"{c.relpath}"[:80],
                 "resource": c.resource, "language": c.language,
-                "lang": lang, "timestamp": timestamp}
+                "lang": lang,
+                "generated": f"{{ by: {PRODUCER}, at: {timestamp} }}"}
         (d / f"{slug}.md").write_text(
             _fm(meta) + f"\n\n# {c.relpath}\n\n{body}\n", encoding="utf-8")
         root_entries.append((c.relpath, f"{sub}/{slug}.md", ""))
         stats["docs" if c.is_doc else "code"] += 1
 
-    lines = ['---\nokf_version: "0.1"\n---\n', f"# {repo_name}\n"]
+    lines = ['---\nokf_version: "0.2"\n---\n', f"# {repo_name}\n"]
     for name, link, desc in root_entries:
         lines.append(f"* [{name}]({link})" + (f" - {desc}" if desc else ""))
     (out / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

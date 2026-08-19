@@ -1,10 +1,10 @@
 ---
 type: Producer
 title: github-to-okf
-description: 把 GitHub 仓库(远程 owner/repo 或本地路径)转换为符合 OKF v0.1 的知识包,应用 code-to-okf 约定。
+description: 把 GitHub 仓库(远程 owner/repo 或本地路径)转换为符合 OKF v0.2 的知识包,应用 code-to-okf 约定。
 tags: [okf, github, code, producer, cli]
 lang: zh
-timestamp: 2026-06-14T00:00:00Z
+generated: { by: human:yzfly, at: 2026-06-14T00:00:00Z }
 license: MIT
 ---
 
