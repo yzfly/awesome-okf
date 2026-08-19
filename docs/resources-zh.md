@@ -42,6 +42,8 @@ author: 云中江树(整理)
 - [构建一个 OKF Claude Code 插件(ap7i.com)](https://ap7i.com/posts/open-knowledge-format-okf-claude-code-plugin/) —— 实践反思:作者实现了一个 `okf-author` 的 Claude Code 插件(创作 / 转换 / 校验 OKF bundle),并借此谈一个极简、低摩擦的格式如何弥合「人写的文档」与「agent 可读」之间的鸿沟。
 - [用 11ty 发布 OKF bundle(Simon Cox)](https://www.simoncox.com/post/2026-06-17-publishing-an-okf-bundle-with-11ty/) —— 实操教程:用 11ty(Eleventy)静态站点生成器把内容发布为符合 OKF v0.1 的 bundle,给出 `okf-index` / `okf-articles` / `okf-log` 三套模板、用过滤器剥离 frontmatter,并结合 `llms.txt` / `robots.txt` / meta link 让 agent 与 LLM 可发现。把"既有站点 → OKF 发布端"这一环讲透。
 - [A Standard, or Just a Folder?(Marc Bara, Medium)](https://medium.com/@marc.bara.iniesta/googles-new-format-for-agent-context-a-standard-or-just-a-folder-82fb21d92041) —— 批判性分析:OKF 统一了"包"的结构,却刻意不统一类型/链接词表,"格式互通 ≠ 语义互通"。
+- [OpenWiki 0.2 adds OKF support(LangChain 官方博客)](https://www.langchain.com/blog/openwiki-0-2-adds-okf-support) —— **本轮最重要的生态信号**:LangChain 在 OpenWiki 0.2 里把 OKF 作为输出格式接入,意味着 OKF 第一次被一个主流 agent 基础设施厂商当作默认知识产物格式,而不只是社区自发实现。
+- [Three Answers to Karpathy's Question: Google OKF, Tencent WeKnora, and LangChain OpenWiki(LinkedIn)](https://www.linkedin.com/pulse/three-answers-karpathys-question-google-okf-tencent-weknora-zhang-l8f9c/) —— 横向对比三种回应 Karpathy「LLM Wiki」命题的路线:Google 的 OKF 规范、**腾讯的 WeKnora**(版面感知的文档解析框架)、LangChain 的 OpenWiki 引擎,分别在持久知识、文档解析与 agent 记忆上如何取舍。对中文读者尤其有参照价值——这是少见的把国内方案放进同一坐标系比较的文章。
 - [The Open Standard That Frees Your AI Knowledge(innFactory)](https://innfactory.ai/en/blog/open-knowledge-format-okf-standard-for-ai-knowledge/) —— 面向企业:用 OKF 把分散在 Confluence/代码库/wiki 的知识收敛为可版本化、跨厂商互通的 bundle。
 - 采用信号:[Hugo Issue #15035 — Support OKF](https://github.com/gohugoio/hugo/issues/15035) —— 静态站点生成器 Hugo 关于支持 OKF 的兼容讨论,生态采纳的早期迹象。
 - 标准化信号:[Holon Community Group(W3C Community Group)](https://www.w3.org/community/holon/) —— 围绕把 OKF 的概念映射到 Web 标准而成立的社区组,探讨 OKF 与既有 Web 标准的对齐,生态从「单一规范」走向「与 Web 标准衔接」的早期迹象。
@@ -150,7 +152,43 @@ author: 云中江树(整理)
 - [vickypandey14/Git2OKF](https://github.com/vickypandey14/Git2OKF) —— 把 Git 仓库转成 OKF bundle 的 producer:面向语义代码理解与知识图谱生成,让 agent 以 OKF 形态读懂一个代码库。与已收录的 tommypacker/okf-generator、inkxel/throughline 同属「代码库 → OKF」方向。
 - [oussamachaabounii/okapi](https://github.com/oussamachaabounii/okapi) —— 用 **Claude Agent SDK** 把代码库逆向工程成 OKF bundle:由 agent 自主遍历、理解代码并产出符合 OKF 的知识包。区别于确定性抽取的 Git2OKF / okf-generator,主打「agent 驱动的逆向工程」。
 - [ThomasRohde/okf-bundle-smith](https://github.com/ThomasRohde/okf-bundle-smith) —— 以 **Codex 插件市场**形式分发的 OKF bundle 工具:创建 / 校验 / 可视化 / 打包 OKF bundle,附 skills 与 MCP 工具。生态里少见的面向 Codex(而非 Claude Code)的 OKF 插件形态。
+- [axoviq-ai/synthadoc](https://github.com/axoviq-ai/synthadoc)(Python,AGPL-3.0,979★)—— 开源 **LLM 知识编译引擎**:把原始资料编译成带出处与生命周期历史的 wiki,导出 `llms.txt` / `llms-full.txt` / GraphML 图 / agent-ready JSON,以及 **OKF bundle**(目前对齐 v0.1)。定位是「知识编译」而非「格式转换」,是本轮 star 第二高的相关项目;OKF 在它这里是众多导出格式之一,可作为「既有知识平台把 OKF 当输出口」的样本。
 - [serradura/okf-gem](https://github.com/serradura/okf-gem)([站点](https://okfgem.com) / [在线 demo](https://demo.okfgem.com))—— **Ruby**(Apache-2.0,已上 RubyGems:`gem install okf`):覆盖 bundle **全生命周期**的 harness,生态里工具多只占一端(写 / 校验 / 看),它把环路合上。**Agent skill** 从既有代码与文档里创作并持续维护概念,人保留编辑权;**CLI / 库**给 agent 与 CI 一个确定性判据——`validate` 只判 v0.1 §9 硬合规、`lint` 只报策展质量,两者刻意分开(§9 本就要求 consumer 容忍坏链),另有排序检索 `search` 与 `index`/`dirs`/`types`/`tags`/`catalog`/`graph` 等视图(全部可 `--json`),亦可作库在进程内调用;**图谱**由 `okf server` 起交互式页面、`okf render` 导出单文件自包含静态 HTML,服务端是可挂载的 **Rack app**(能嵌进 Rails 路由)。per-user registry 给 bundle 起名(`@slug` 在任何目录都等价于路径),一条 `okf server` 把多个已注册 bundle 挂在同一 hub 下。自我定位是「让知识有一个持久的家」:agent 不必每次会话重新推导上下文,新同事与新 agent 读同一份文件。100% 本地,无账号无遥测。也是生态首个 Ruby 实现:Ruby ≥ 2.4(系统自带 Ruby 即可跑)、运行时只依赖 rack / webrick / minifts,不装 Ruby 可走官方 Docker 镜像。仓库自身以 `.okf/` dogfooding。详见 [okf-gem 概念页](/references/okf-gem.md)。
+
+### v0.2 适配追踪(2026-08)
+
+> 上游 2026-08 把规范推到 **v0.2**(新增 `sources` 出处、`generated`/`verified` 信任、`status`/`stale_after` 生命周期,以及 `Attested Computation` 概念类型)。
+> 下面是已在 README / 产出里明确声明适配 v0.2 的项目——判断依据是仓库内出现 `okf_version: "0.2"`、`Attested Computation`、`stale_after`、`generated.at` 等 v0.2 专有标记,而非仅仅提到「OKF」。
+> 完整规范中文版见 [okf-spec-zh](./okf-spec-zh.md),两处破坏性变更见 [§13](./okf-spec-zh.md#13-与-v01-的差异)。
+
+**头部适配者**
+
+- [langchain-ai/openwiki](https://github.com/langchain-ai/openwiki) —— **LangChain 官方**,为代码库撰写并持续维护 agent 文档的 CLI,可通过 GitHub Actions / GitLab CI / Bitbucket Pipelines 自更新;**两种模式都产出 OKF v0.2 bundle**,每个概念带非空 `type`,根 `index.md` 声明 `okf_version: "0.2"`,生产者自定义扩展字段在更新与迁移中保留,并附经校验的 Mermaid 图。官方博客[《OpenWiki 0.2 adds OKF support》](https://www.langchain.com/blog/openwiki-0-2-adds-okf-support)是本轮最重要的生态信号——**目前 OKF 生态 star 最高的项目(15k+★)**,也是第一个把 OKF 当默认输出格式的主流 agent 文档工具。详见 [openwiki 概念页](/references/openwiki.md)。
+- [iwe-org/iwe](https://github.com/iwe-org/iwe) —— **Rust,Apache-2.0,1.5k+★**:Markdown 知识图谱,同时是编辑器 LSP(VS Code / Neovim / Zed / Helix)、CLI 与给 agent 的 MCP 记忆后端。OKF 是它的一等能力而非附加导出:`iwe init --okf` 脚手架出合规 bundle,`iwe schema validate` 机械校验合规性,`iwe find --filter '{type: …}'` 直接按 OKF 头信息查询;官方两个 workspace 模板([marketing-workspace](https://github.com/iwe-org/marketing-workspace) / [dev-workspace](https://github.com/iwe-org/dev-workspace))**以 v0.2 bundle 形式分发并在每次提交的 CI 里校验**。主张「按结构检索,而不是靠相似度猜」,20000 个文件亚秒级处理。详见 [iwe 概念页](/references/iwe.md)。
+- [h30190/HJPLUS_Taiwan_Architect_KB](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB) —— **中文世界目前最大的 OKF v0.2 领域知识库**(繁体,145★,代码 Apache-2.0 / 内容 CC BY-SA 4.0,有[在线站点](https://h30190.github.io/HJPLUS_Taiwan_Architect_KB/))。台湾 AEC(建筑 × 工程 × 营造)产业的从业技能库:最佳实务、设计标准、施工指引。2026-08-07 **全库升级到 v0.2**——概念标注 `type`、启用 `verified` 查证家族、`raw/log.md` 记沿革,并自带 `scripts/validate_okf.py` 校验器。对中文生态的意义在于:它证明 OKF 不只适合「代码库 / 数据表」,一个**垂直行业的中文经验库**同样能跑通,而且 `verified` 家族天然对得上「专业知识需要有人背书」的场景。
+
+**工具与实现**
+
+- [TheMorpheus407/RepoLens](https://github.com/TheMorpheus407/RepoLens)(Shell,Apache-2.0,292★)—— 多视角代码审计工具,280 个专家 agent 做代码评审 / 安全 / 架构分析,审计产物以 OKF v0.2 输出,让「审计结论」成为 agent 可持续消费的知识而不是一次性报告。
+- [Ranork/remnus-app](https://github.com/Ranork/remnus-app)(TypeScript,AGPL-3.0,64★)—— MCP 原生工作区(数据库 / 页面 / 看板 / 日历),把工作区内容按 OKF v0.2 暴露给 agent。
+- [rretsiem/opencode-hive](https://github.com/rretsiem/opencode-hive)(Python,MIT,36★)—— OpenCode 的多 agent 架构(成本优化路由 + 并行执行),用 OKF v0.2 做 agent 间的共享记忆层,`generated.at` / `stale_after` 用来判断上下文是否还新鲜。
+- [philngt/contextd](https://github.com/philngt/contextd)(Python,MIT,29★)—— AI 编码 agent 的**上下文构建系统**:确定性、可解释地生成 agent 上下文,产出 OKF v0.2。把「喂给 agent 的上下文」当成可构建、可复现的产物,而不是每次现攒。
+- [kushal-omnius/open-knowledge-compiler](https://github.com/kushal-omnius/open-knowledge-compiler)(Python,Apache-2.0,27★)—— 把 Git 历史、PR 与测试记录**确定性地编译**成带出处的 OKF v0.2 bundle。正好落在 v0.2 新增的 `sources` 出处家族上:知识从哪条 commit / 哪个 PR 来是可追的。
+- [stjbrown/agent-knowledge](https://github.com/stjbrown/agent-knowledge)(JavaScript,MIT,26★)—— 可移植的 Agent Skills,用于构建与维护 OKF 项目,README 明确覆盖 `Attested Computation`。
+- [equationalapplications/expo-llm-wiki](https://github.com/equationalapplications/expo-llm-wiki)(TypeScript,MIT,22★)—— 离线优先、SQLite 支撑的分层多实体记忆,面向 **Expo / React Native** 应用,按 OKF v0.2 组织。生态里少见的「移动端 OKF 消费者」。
+- [kiycoh/silica-agent](https://github.com/kiycoh/silica-agent)(Python,AGPL-3.0,21★)—— 本地优先的知识管理工具,连接概念并让 LLM 在其上推理,存储格式为 OKF v0.2。
+- [StringKe/kxen](https://github.com/StringKe/kxen)(Rust,MIT,12★)—— **中文项目**:跨平台、本地优先的 Coding Agent 工作台(持久对话分支、Workspace / Session、多模型、Goal 与 Agent 编排),仓库内直接写入 `okf_version: "0.2"`。中文生态里少数「把 OKF 当 agent 工作台底层记忆格式」的实现。
+- [jordiboehme/crystalline](https://github.com/jordiboehme/crystalline)(Rust,AGPL-3.0,9★)—— 面向 AI agent 的本地优先「结晶化」知识:强调**能留存下来**的知识,产出带 `okf_version: "0.2"` 与 `stale_after` 的 bundle。
+- [abcubed3/okf](https://github.com/abcubed3/okf)(Go,Apache-2.0,6★)—— OKF-go 工具套件:校验 bundle、支持 v0.2 的 `Attested Computation` 与 `stale_after`。与已收录的 okfcli/okf、superops-team/okf 同属 Go 实现,但更偏「v0.2 新家族的完整支持」。
+- [lorsabyan/okf-skill](https://github.com/lorsabyan/okf-skill)(Python,Apache-2.0,5★)与 [lorsabyan/okf-reader](https://github.com/lorsabyan/okf-reader)(TypeScript,Apache-2.0)—— 同一作者的「写 + 读」两件套:前者教 Claude Code / Codex 创作、校验与消费 OKF,后者是**静态优先的 v0.2 bundle 阅读应用**(侧边栏导航)。
+- [mavaali/daftari](https://github.com/mavaali/daftari)(TypeScript,MIT,5★)—— 开源多用户知识库,通过 MCP 暴露给 agent,支持 `Attested Computation` 与 `stale_after`。
+- [mfdaves/okf-mcp](https://github.com/mfdaves/okf-mcp)(JavaScript,MIT,4★)—— 自我定位就是「**OKF (v0.2) MCP server**」,仓库内 v0.2 标记最完整(`okf_version: "0.2"` / `Attested Computation` / `generated.at` / `stale_after` 全覆盖)。与已收录的 dddpaul/okf-mcp-server、travisjakel/okf-mcp 同属「OKF → MCP」一线,但明确按 v0.2 建模。
+- [Scott1743/mneme](https://github.com/Scott1743/mneme)(Python,MIT,4★)—— 轻量 LLM 知识 wiki,skill 优先 + pip wheel 安装,已跟进 v0.2 字段。
+- [saschb2b/okf-bundles](https://github.com/saschb2b/okf-bundles)(JavaScript,MIT)—— **打包好的专家知识 bundle 集合**(体量近 50k 文件),供 agent 直接读取,按 v0.2 组织。与同作者的桌面阅读器 [okf-studio](https://github.com/saschb2b/okf-studio) 构成「内容 + 阅读器」一对——生态里第一次出现「bundle 内容源」这一形态。
+- [galkleinman/okf-toolkit](https://github.com/galkleinman/okf-toolkit)(Rust,Apache-2.0)—— 单二进制的 v0.2 bundle 校验 / lint / serve。**注意与已收录的 akdira/okf-toolkit(Python)重名但不同仓库、不同语言。**
+- [enkinex/enkinex-okf](https://github.com/enkinex/enkinex-okf)(JavaScript,Apache-2.0)—— 面向 OKF 的 KCL 库,README 对 `Attested Computation` 着墨最多。
+- [nitecon/agent-memory](https://github.com/nitecon/agent-memory)(Rust,Apache-2.0)—— Claude 记忆系统,词项 + 向量混合检索带排序,跟进了 v0.2 的认证概念。
+
 
 ## 五、LLM Wiki 实践教程(与 OKF 同源)
 
@@ -168,6 +206,7 @@ author: 云中江树(整理)
 
 - [supachai-j/llm-wiki-101](https://github.com/supachai-j/llm-wiki-101) —— 含 Karpathy gist 存档与实践。
 - [Programming-With-Maury/Karpathy-LLM-Wiki](https://github.com/Programming-With-Maury/Karpathy-LLM-Wiki)
+- [gavischneider/awesome-llm-wiki](https://github.com/gavischneider/awesome-llm-wiki) —— LLM Wiki 方向的英文精选清单(84★),蓝图 / 框架 / 技术文章为主,OKF 相关的新闻与实践文章收得较全,可与本仓库互为补充(本仓库偏 OKF 规范与中文生态,它偏 LLM Wiki 全景与英文文章)。
 - [tobi/qmd](https://github.com/tobi/qmd) —— 本地 Markdown 搜索引擎(Karpathy 推荐,可作 OKF 的 consumer/search 后端)。
 
 ## 七、相关标准 / 邻近概念

@@ -21,6 +21,8 @@
 
 按 star / 成熟度 / 类型代表性择优,从 [resources-zh](/docs/resources-zh.md) 的扁平清单里提升为一等概念;完整 60+ 仓库清单仍以 resources-zh 为准。
 
+* [openwiki.md](openwiki.md) - LangChain 官方,产出 OKF v0.2 bundle,生态 star 最高(生态信号)
+* [iwe.md](iwe.md) - Markdown 知识图谱,LSP + CLI + MCP,OKF 一等支持(实现)
 * [okf-knowledge.md](okf-knowledge.md) - /okf skill,社区星标最高(skill)
 * [okf-toolkit.md](okf-toolkit.md) - Python 全功能 CLI,PyPI(CLI)
 * [okf-cli.md](okf-cli.md) - Go,filing cabinet 架构 + MCP(CLI)
