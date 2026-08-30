@@ -2,7 +2,7 @@
 type: Reference
 title: okf-gem(OKF 全链路 harness:创作 skill + CLI/库 + 图谱)
 description: 覆盖 bundle 全生命周期的 harness:agent skill 负责创作与维护,CLI / 库做确定性校验与检索,图谱供人浏览,100% 本地运行。
-resource: https://github.com/serradura/okf-gem
+resource: https://github.com/serradura/okf
 tags: [okf, harness, skill, cli, 图谱, ruby, 社区]
 lang: zh
 generated: { by: human:yzfly, at: 2026-07-21T00:00:00Z }
@@ -24,4 +24,4 @@ generated: { by: human:yzfly, at: 2026-07-21T00:00:00Z }
 
 与已收录项目的关系:[okftool](/references/okftool.md)(专做校验 / lint)与 [kiso](/references/kiso.md)(发布 / 阅读端)各占一环,okf-gem 的差异在于一个包覆盖创作到浏览的全链路。
 
-源码:<https://github.com/serradura/okf-gem> ;站点与文档:<https://okfgem.com>
+源码:<https://github.com/serradura/okf> ;站点与文档:<https://okfgem.com>
