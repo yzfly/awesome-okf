@@ -122,6 +122,7 @@ myokf to-web ./kb -o kb.html
 | [okfcli/okf](https://github.com/okfcli/okf) | [![★](https://img.shields.io/github/stars/okfcli/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/okfcli/okf/stargazers) | Go | 厂商中立 Go CLI:创建 / 校验 / lint / 索引 / 搜索 / 图谱,为被 agent 驱动而设计 |
 | [DavidROliverBA/aix-format](https://github.com/DavidROliverBA/aix-format) | [![★](https://img.shields.io/github/stars/DavidROliverBA/aix-format?style=flat&label=%E2%98%85&color=444)](https://github.com/DavidROliverBA/aix-format/stargazers) | Python | AIX:OKF v0.2 的严格超集——稳定标识、类型化关系、媒体身份、联邦 |
 | [W4G1/okf](https://github.com/W4G1/okf) | [![★](https://img.shields.io/github/stars/W4G1/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/W4G1/okf/stargazers) | Rust | 纯 Rust 零依赖实现与 CLI 工具链 |
+| [CogniSwitch/KL4A](https://github.com/CogniSwitch/KL4A) | [![★](https://img.shields.io/github/stars/CogniSwitch/KL4A?style=flat&label=%E2%98%85&color=444)](https://github.com/CogniSwitch/KL4A/stargazers) | Rust | 把 SOP、政策、法规文档(PDF / DOCX / 纯文本)转为 OKF v0.2 bundle;每条知识都带原文精确跨度,人工审核通过前不标记 verified |
 
 ## 这个仓库本身
 

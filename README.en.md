@@ -91,6 +91,7 @@ OKF v0.2 leaves some gaps. Three backward-compatible ideas are written up here (
 | [okfcli/okf](https://github.com/okfcli/okf) | [![★](https://img.shields.io/github/stars/okfcli/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/okfcli/okf/stargazers) | Go | Vendor-neutral Go CLI: create / validate / lint / index / search / graph, built to be driven by agents |
 | [DavidROliverBA/aix-format](https://github.com/DavidROliverBA/aix-format) | [![★](https://img.shields.io/github/stars/DavidROliverBA/aix-format?style=flat&label=%E2%98%85&color=444)](https://github.com/DavidROliverBA/aix-format/stargazers) | Python | AIX: a strict superset of OKF v0.2 — stable identity, typed relationships, media identity, federation |
 | [W4G1/okf](https://github.com/W4G1/okf) | [![★](https://img.shields.io/github/stars/W4G1/okf?style=flat&label=%E2%98%85&color=444)](https://github.com/W4G1/okf/stargazers) | Rust | Pure-Rust zero-dependency implementation and CLI toolkit |
+| [CogniSwitch/KL4A](https://github.com/CogniSwitch/KL4A) | [![★](https://img.shields.io/github/stars/CogniSwitch/KL4A?style=flat&label=%E2%98%85&color=444)](https://github.com/CogniSwitch/KL4A/stargazers) | Rust | SOP / policy / regulation documents (PDF, DOCX, text) into OKF v0.2 bundles; every claim carries its exact source span, and nothing is verified until a human approves it |
 
 ## Links
 
