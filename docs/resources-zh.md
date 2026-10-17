@@ -162,6 +162,7 @@ author: 云中江树(整理)
 - [DavidROliverBA/aix-format](https://github.com/DavidROliverBA/aix-format)(Python,20★)—— AIX(AI eXchange Format):OKF v0.2 的**严格超集**,加稳定标识、类型化关系、出处、媒体身份与联邦;可视作对 OKF 留白的一份系统性扩展提案,与本仓库三份提案思路相近。
 - [weby-homelab/power-framework](https://github.com/weby-homelab/power-framework)(Python,20★)—— 命令行 + MCP 两用的知识库管理框架:Pydantic v2 强校验 OKF 头信息,附治理字段(owner / status),面向知识工作者。
 - [jeromeetienne/mnemo_wiki](https://github.com/jeromeetienne/mnemo_wiki)(TypeScript,16★)—— 用 OKF 存储的 LLM wiki 构建与维护工具,「LLM Wiki + OKF」两个想法合在一个文件夹里。
+- [ahmedibrahim085/okf-knowledge-gate](https://github.com/ahmedibrahim085/okf-knowledge-gate)(Bash + Python,MIT,0★)—— **Bash + Python** 的 bundle 检查关卡(MIT),走"信任 / 治理"方向:检查 `verified: by: human:` 的人工验证能否被相信(草稿、早于改动、agent 所写的笔记、`Human:` 或夹杂西里尔字母的仿冒写法),并用 `okf-verify` 核对笔记引用的 commit 与文件路径是否真实存在(CONFIRMED / REFUTED / UNRESOLVED)。同一套检查以 CLI、GitHub Action、pre-commit hook 和 Claude Code 插件四种形态提供。
 
 ### v0.2 适配追踪(2026-08)
 
