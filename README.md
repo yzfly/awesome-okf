@@ -125,6 +125,8 @@ myokf to-web ./kb -o kb.html
 | [CogniSwitch/KL4A](https://github.com/CogniSwitch/KL4A) | [![★](https://img.shields.io/github/stars/CogniSwitch/KL4A?style=flat&label=%E2%98%85&color=444)](https://github.com/CogniSwitch/KL4A/stargazers) | Rust | 把 SOP、政策、法规文档(PDF / DOCX / 纯文本)转为 OKF 风格 bundle（文档披露了与 v0.2 元数据的差异）;每条知识都带原文精确跨度,人工审核通过前不标记 verified |
 | [JidoSeal](https://github.com/Jidoseal/jidoseal-mcp) | [![★](https://img.shields.io/github/stars/Jidoseal/jidoseal-mcp?style=flat&label=%E2%98%85&color=444)](https://github.com/Jidoseal/jidoseal-mcp/stargazers) | Python | 免费的本地 OKF 检查器（MCP）。可选付费证书。MCP 服务是 Apache-2.0；扫描引擎不是开源。与 OKF 规范或 Google 无隶属。 |
 | [ahmedibrahim085/okf-knowledge-gate](https://github.com/ahmedibrahim085/okf-knowledge-gate) | [![★](https://img.shields.io/github/stars/ahmedibrahim085/okf-knowledge-gate?style=flat&label=%E2%98%85&color=444)](https://github.com/ahmedibrahim085/okf-knowledge-gate/stargazers) | Bash、Python | OKF bundle 的检查关卡:规范合规、自定规则、过期检测、`human:` 人工验证元数据的一致性与可疑标记（不能证明验证者身份）、笔记引用的 commit 是否存在。一个退出码可用于 CI(GitHub Action)、pre-commit 和 Claude Code |
+| [okf-memory/okf-agent-memory](https://github.com/okf-memory/okf-agent-memory) | [![★](https://img.shields.io/github/stars/okf-memory/okf-agent-memory?style=flat&label=%E2%98%85&color=444)](https://github.com/okf-memory/okf-agent-memory/stargazers) | Go | 基于 OKF v0.2 的 Git 原生 Agent 项目记忆:双记忆架构,内存 BM25 检索,内置 MCP server |
+| [frypan05/philosopher-OKF](https://github.com/frypan05/philosopher-OKF) | [![★](https://img.shields.io/github/stars/frypan05/philosopher-OKF?style=flat&label=%E2%98%85&color=444)](https://github.com/frypan05/philosopher-OKF/stargazers) | Skill | 把任意主题讲成一页论文风格 HTML 学习页的 Agent Skill,知识以 OKF v0.2 bundle 存放 |
 
 ## 这个仓库本身
 
